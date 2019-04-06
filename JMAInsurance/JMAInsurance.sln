@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance", "JMAInsurance\JMAInsurance.csproj", "{2AC76F21-B52E-4469-927C-34C58E141CEE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.Web", "JMAInsurance\JMAInsurance.Web.csproj", "{2AC76F21-B52E-4469-927C-34C58E141CEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.EntityFramwork", "JMAInsurance.EntityFramwork\JMAInsurance.EntityFramwork.csproj", "{A679EA97-2FC2-4CBE-8871-E5C9C8FA11CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.Dto", "JMAInsurance.Dto\JMAInsurance.Dto.csproj", "{BFB5ADBE-5B4D-4D75-B7FE-FC3EDADC9E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.Application", "JMAInsurance.Application\JMAInsurance.Application.csproj", "{3F06528C-7AA2-4AD8-9ECA-094337086681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.ApplicationShared", "JMAInsurance.ApplicationShared\JMAInsurance.ApplicationShared.csproj", "{12327525-7D96-4C92-935C-8CC1FEDD7AD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.Repository", "JMAInsurance.Repository\JMAInsurance.Repository.csproj", "{54CFE467-8AE0-4F33-B2B8-B12AEFACDE04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +25,26 @@ Global
 		{2AC76F21-B52E-4469-927C-34C58E141CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AC76F21-B52E-4469-927C-34C58E141CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AC76F21-B52E-4469-927C-34C58E141CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A679EA97-2FC2-4CBE-8871-E5C9C8FA11CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A679EA97-2FC2-4CBE-8871-E5C9C8FA11CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A679EA97-2FC2-4CBE-8871-E5C9C8FA11CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A679EA97-2FC2-4CBE-8871-E5C9C8FA11CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB5ADBE-5B4D-4D75-B7FE-FC3EDADC9E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB5ADBE-5B4D-4D75-B7FE-FC3EDADC9E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB5ADBE-5B4D-4D75-B7FE-FC3EDADC9E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB5ADBE-5B4D-4D75-B7FE-FC3EDADC9E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F06528C-7AA2-4AD8-9ECA-094337086681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F06528C-7AA2-4AD8-9ECA-094337086681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F06528C-7AA2-4AD8-9ECA-094337086681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F06528C-7AA2-4AD8-9ECA-094337086681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12327525-7D96-4C92-935C-8CC1FEDD7AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12327525-7D96-4C92-935C-8CC1FEDD7AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12327525-7D96-4C92-935C-8CC1FEDD7AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12327525-7D96-4C92-935C-8CC1FEDD7AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54CFE467-8AE0-4F33-B2B8-B12AEFACDE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54CFE467-8AE0-4F33-B2B8-B12AEFACDE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54CFE467-8AE0-4F33-B2B8-B12AEFACDE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54CFE467-8AE0-4F33-B2B8-B12AEFACDE04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
