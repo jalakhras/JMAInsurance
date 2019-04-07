@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A679EA97-2FC2-4CBE-8871-E5C9C8FA11CB}</ProjectGuid>
+    <ProjectGuid>{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JMAInsurance.EntityFramwork</RootNamespace>
-    <AssemblyName>JMAInsurance.EntityFramwork</AssemblyName>
+    <RootNamespace>JMAInsurance.Model</RootNamespace>
+    <AssemblyName>JMAInsurance.Model</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -54,28 +54,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbContext\JMAInsuranceDbContext.cs" />
-    <Compile Include="Migrations\201904070615172_init.cs" />
-    <Compile Include="Migrations\201904070615172_init.Designer.cs">
-      <DependentUpon>201904070615172_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Applicant.cs" />
+    <Compile Include="Models\Employment.cs" />
+    <Compile Include="Models\Products.cs" />
+    <Compile Include="Models\Progress.cs" />
+    <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\JMAInsurance.Model\JMAInsurance.Model.csproj">
-      <Project>{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}</Project>
-      <Name>JMAInsurance.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904070615172_init.resx">
-      <DependentUpon>201904070615172_init.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
