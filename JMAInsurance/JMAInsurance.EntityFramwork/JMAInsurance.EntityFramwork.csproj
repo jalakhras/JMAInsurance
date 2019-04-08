@@ -55,9 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbContext\JMAInsuranceDbContext.cs" />
-    <Compile Include="Migrations\201904070615172_init.cs" />
-    <Compile Include="Migrations\201904070615172_init.Designer.cs">
-      <DependentUpon>201904070615172_init.cs</DependentUpon>
+    <Compile Include="Migrations\201904081145303_AddedScemaLookup.cs" />
+    <Compile Include="Migrations\201904081145303_AddedScemaLookup.Designer.cs">
+      <DependentUpon>201904081145303_AddedScemaLookup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,15 +67,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JMAInsurance.Model\JMAInsurance.Model.csproj">
-      <Project>{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}</Project>
-      <Name>JMAInsurance.Model</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Migrations\201904081145303_AddedScemaLookup.resx">
+      <DependentUpon>201904081145303_AddedScemaLookup.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904070615172_init.resx">
-      <DependentUpon>201904070615172_init.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="Repository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JMAInsurance.Model\JMAInsurance.Entity.csproj">
+      <Project>{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}</Project>
+      <Name>JMAInsurance.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

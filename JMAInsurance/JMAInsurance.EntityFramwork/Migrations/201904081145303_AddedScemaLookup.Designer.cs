@@ -7,13 +7,13 @@ namespace JMAInsurance.EntityFramwork.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class init : IMigrationMetadata
+    public sealed partial class AddedScemaLookup : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedScemaLookup));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904070615172_init"; }
+            get { return "201904081145303_AddedScemaLookup"; }
         }
         
         string IMigrationMetadata.Source

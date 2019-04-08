@@ -1,9 +1,12 @@
-﻿namespace JMAInsurance.Model
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace JMAInsurance.Entity
 {
+
+    [Table("Products", Schema = "Insurance")]
     public class Products
     {
-        public int ProductsId { get; set; }
-        public int ApplicantId { get; set; }
+        public int Id { get; set; }
         public double Liability { get; set; }
         public bool RoadSideAssistance { get; set; }
         public double PropertyDamage { get; set; }
@@ -12,7 +15,8 @@
         public bool Rental { get; set; }
         public bool LoanPayoff { get; set; }
         public bool DriverRewards { get; set; }
-
+        public int ApplicantId { get; set; }
+        [ForeignKey("ApplicantId")]
         public virtual Applicant Applicant { get; set; }
     }
 }

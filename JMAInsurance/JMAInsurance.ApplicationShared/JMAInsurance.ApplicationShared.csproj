@@ -31,8 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +48,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JMAInsurance.Models\JMAInsurance.Models.csproj">
+      <Project>{244c8bb8-b997-4a1b-a39b-9ab85b1d1b97}</Project>
+      <Name>JMAInsurance.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JMAInsurance.Model\JMAInsurance.Entity.csproj">
+      <Project>{b78c9c68-4c36-408b-8ed8-54aa68dfa6b6}</Project>
+      <Name>JMAInsurance.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\JMAInsurance.Repository.csproj">
+      <Project>{378c5f1a-5202-4719-85c0-1124334bc43c}</Project>
+      <Name>JMAInsurance.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

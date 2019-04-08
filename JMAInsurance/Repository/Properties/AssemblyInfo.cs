@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JMAInsurance.Entity")]
+[assembly: AssemblyTitle("Repository")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("JMAInsurance.Model")]
+[assembly: AssemblyProduct("Repository")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b78c9c68-4c36-408b-8ed8-54aa68dfa6b6")]
+[assembly: Guid("378c5f1a-5202-4719-85c0-1124334bc43c")]
 
 // Version information for an assembly consists of the following four values:
 //

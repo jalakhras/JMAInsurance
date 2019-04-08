@@ -1,6 +1,6 @@
-﻿using System.Data.Entity;
+﻿using JMAInsurance.Entity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using JMAInsurance.Model;
+using System.Data.Entity;
 
 namespace JMAInsurance.EntityFramwork.DbContext
 {
@@ -11,12 +11,14 @@ namespace JMAInsurance.EntityFramwork.DbContext
         {
             Database.SetInitializer<JMAInsuranceDbContext>(new DropCreateDatabaseIfModelChanges<JMAInsuranceDbContext>());
         }
-
         public DbSet<Applicant> Applicants { get; set; }
         public DbSet<Employment> Employment { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Products> Products { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<MaritalStatus> MaritalStatus { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<City> Cities { get; set; }
     }
 
     public class JMAInsuranceInitializer : DropCreateDatabaseIfModelChanges<JMAInsuranceDbContext>
@@ -26,4 +28,5 @@ namespace JMAInsurance.EntityFramwork.DbContext
             base.Seed(context);
         }
     }
+    
 }
