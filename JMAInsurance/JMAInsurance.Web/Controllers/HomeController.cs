@@ -1,17 +1,18 @@
-﻿using JMAInsurance.Application.Service;
+﻿using JMAInsurance.ApplicationShared.Service;
 using System.Web.Mvc;
 
 namespace JMAInsurance.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IApplicantService _applicantService;
-      
+        private readonly IApplicantService  _applicantService;
+
 
         public HomeController(IApplicantService applicantService)
         {
             _applicantService = applicantService;
         }
+
         public ActionResult Index()
         {
             _applicantService.GetAll();

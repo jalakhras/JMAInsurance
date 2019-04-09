@@ -48,16 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dto\Address.cs" />
-    <Compile Include="Dto\Applicant.cs" />
-    <Compile Include="Dto\City.cs" />
-    <Compile Include="Dto\Country.cs" />
-    <Compile Include="Dto\Employment.cs" />
-    <Compile Include="Dto\MaritalStatus.cs" />
-    <Compile Include="Dto\Products.cs" />
-    <Compile Include="Dto\Progress.cs" />
-    <Compile Include="Dto\Vehicle.cs" />
-    <Compile Include="Dto\Year.cs" />
+    <Compile Include="Dto\AddressDto.cs" />
+    <Compile Include="Dto\ApplicantDto.cs" />
+    <Compile Include="Dto\CityDto.cs" />
+    <Compile Include="Dto\CountryDto.cs" />
+    <Compile Include="Dto\EmploymentDto.cs" />
+    <Compile Include="Dto\MaritalStatusDto.cs" />
+    <Compile Include="Dto\ProductsDto.cs" />
+    <Compile Include="Dto\ProgressDto.cs" />
+    <Compile Include="Dto\VehicleDto.cs" />
+    <Compile Include="Dto\YearDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

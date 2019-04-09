@@ -13,13 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.Web", "JMAInsu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.Entity", "JMAInsurance.Model\JMAInsurance.Entity.csproj", "{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.Repository", "Repository\JMAInsurance.Repository.csproj", "{378C5F1A-5202-4719-85C0-1124334BC43C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.Models", "JMAInsurance.Models\JMAInsurance.Models.csproj", "{244C8BB8-B997-4A1B-A39B-9AB85B1D1B97}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{BC779A63-6592-44CF-AA5F-A46F83187C94}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JMAInsurance.Core", "JMAInsurance.Core\JMAInsurance.Core.csproj", "{ABABCC4B-EED2-4564-9147-35D1ABEDD25B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,24 +41,13 @@ Global
 		{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{378C5F1A-5202-4719-85C0-1124334BC43C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{378C5F1A-5202-4719-85C0-1124334BC43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{378C5F1A-5202-4719-85C0-1124334BC43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{378C5F1A-5202-4719-85C0-1124334BC43C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{244C8BB8-B997-4A1B-A39B-9AB85B1D1B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{244C8BB8-B997-4A1B-A39B-9AB85B1D1B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{244C8BB8-B997-4A1B-A39B-9AB85B1D1B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{244C8BB8-B997-4A1B-A39B-9AB85B1D1B97}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ABABCC4B-EED2-4564-9147-35D1ABEDD25B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ABABCC4B-EED2-4564-9147-35D1ABEDD25B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ABABCC4B-EED2-4564-9147-35D1ABEDD25B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ABABCC4B-EED2-4564-9147-35D1ABEDD25B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{ABABCC4B-EED2-4564-9147-35D1ABEDD25B} = {BC779A63-6592-44CF-AA5F-A46F83187C94}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {068B8048-B5F5-489D-85C1-974F51651747}

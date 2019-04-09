@@ -254,18 +254,6 @@
       <Project>{3f06528c-7aa2-4ad8-9eca-094337086681}</Project>
       <Name>JMAInsurance.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JMAInsurance.Core\JMAInsurance.Core.csproj">
-      <Project>{ABABCC4B-EED2-4564-9147-35D1ABEDD25B}</Project>
-      <Name>JMAInsurance.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\JMAInsurance.EntityFramwork\JMAInsurance.EntityFramwork.csproj">
-      <Project>{A679EA97-2FC2-4CBE-8871-E5C9C8FA11CB}</Project>
-      <Name>JMAInsurance.EntityFramwork</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\JMAInsurance.Model\JMAInsurance.Entity.csproj">
-      <Project>{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}</Project>
-      <Name>JMAInsurance.Entity</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

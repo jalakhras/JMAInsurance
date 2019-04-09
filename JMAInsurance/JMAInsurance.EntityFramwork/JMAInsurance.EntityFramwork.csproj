@@ -168,63 +168,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbContext\JMAInsuranceDbContext.cs" />
-    <Compile Include="Events\IEventHandler.cs" />
-    <Compile Include="Extensibility\Abstractions\IDependency.cs" />
-    <Compile Include="Extensibility\Abstractions\ISingletonDependency.cs" />
-    <Compile Include="Extensibility\Abstractions\IStartup.cs" />
-    <Compile Include="Extensibility\Abstractions\ITransientDependency.cs" />
-    <Compile Include="Extensibility\Abstractions\IUnitOfWorkDependency.cs" />
-    <Compile Include="Extensibility\Attributes\FeatureAttribute.cs" />
-    <Compile Include="Extensibility\Attributes\SuppressDependencyAttribute.cs" />
-    <Compile Include="Extensibility\ExtensionLoader.cs" />
-    <Compile Include="Extensibility\ExtensionManager.cs" />
-    <Compile Include="Extensibility\Extensions\ContainerBuilderExtensions.cs" />
-    <Compile Include="Extensibility\Extensions\HttpContextExtensions.cs" />
-    <Compile Include="Extensibility\Extensions\TypeExtensions.cs" />
-    <Compile Include="Extensibility\IExtensionLoader.cs" />
-    <Compile Include="Extensibility\IExtensionManager.cs" />
-    <Compile Include="Extensions\ObjectExtensions.cs" />
-    <Compile Include="Filters\Abstractions\IPermanentFilter.cs" />
-    <Compile Include="Filters\FiltersProvider.cs" />
-    <Compile Include="HostStarter.cs" />
-    <Compile Include="Host\IHostEvents.cs" />
-    <Compile Include="IoC.cs" />
-    <Compile Include="Localization\Extensions\ControllerExtensions.cs" />
-    <Compile Include="Localization\ILocalizationManager.cs" />
-    <Compile Include="Localization\ILocalizationProvider.cs" />
-    <Compile Include="Localization\LocalizationManager.cs" />
-    <Compile Include="Migrations\201904081145303_AddedScemaLookup.cs" />
-    <Compile Include="Migrations\201904081145303_AddedScemaLookup.Designer.cs">
-      <DependentUpon>201904081145303_AddedScemaLookup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904091307213_Init.cs" />
-    <Compile Include="Migrations\201904091307213_Init.Designer.cs">
-      <DependentUpon>201904091307213_Init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="MVC\ActionInvoker.cs" />
-    <Compile Include="MVC\ControllerFactory.cs" />
-    <Compile Include="MVC\NotFoundActionDescriptor.cs" />
-    <Compile Include="MVC\NotFoundAwarenessFilter.cs" />
-    <Compile Include="MVC\NotFoundController.cs" />
-    <Compile Include="MVC\NotFoundViewResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
-    <Compile Include="ViewEngine\IViewPage.cs" />
-    <Compile Include="ViewEngine\Razor\ModuleAwareViewEngine.cs" />
-    <Compile Include="ViewEngine\Razor\WebViewPage.cs" />
+    <Compile Include="Repository\Extensions.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904081145303_AddedScemaLookup.resx">
-      <DependentUpon>201904081145303_AddedScemaLookup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904091307213_Init.resx">
-      <DependentUpon>201904091307213_Init.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

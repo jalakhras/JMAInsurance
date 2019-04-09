@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JMAInsurance.Application.Service
+namespace JMAInsurance.ApplicationShared.Service
 {
     public interface IApplicantService 
     {
