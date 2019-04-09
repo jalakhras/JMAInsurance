@@ -1,0 +1,41 @@
+﻿@using EPM.Models
+@using PMS.Framework.Extensibility.Extensions
+
+@{
+    ViewBag.Title = T("LBL_Error");
+    Layout = "~/Areas/StrategyCenter/Views/Shared/_StrategyCenterWithoutSideMenu.cshtml";
+}
+
+<div id="page_content">
+    <div id="page_content_inner">
+        <div class="container">
+            <div class="uk-width-1-1">
+
+                <div class="md-card uk-margin-medium-bottom">
+                    <div class="md-card-content">
+                        <div class="uk-grid" data-uk-grid-margin>
+                            <div class="uk-width-large-1-1">
+                                @*<h2>@T("LBL_Error")</h2>
+                                    <h2>@T("LBL_ErrorDescription")</h2>*@
+                                <pre style="text-align:center">
+                                     @*@TempData.Peek("ErrorMessage")*@
+                                <h3>@T("MSG_NotFound")</h3>
+                                </pre>
+                            </div>
+                        </div>
+                        <div class="uk-grid" data-uk-grid-margin>
+                            @*<div class="uk-width-large-1-1">
+                                    @Html.ActionLink(T("LBL_HomePage"), "ExcecutiveView", "PlanTracking", new { area = "StrategyCenter" }, new { @class = "btn btn-success btn-lg" })<span class="glyphicon glyphicon-home"></span>
+                                    @if (SessionManager.CurrentLoggedInUser.IsAdmin)
+                                    {
+
+                                        @Html.ActionLink(T("LBL_ContactSupport"), "Index", "ErrorLog", new { area = "AdminSite" }, new { @class = "btn btn-danger btn-lg" })<span class="glyphicon glyphicon-home"></span>
+                                    }
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

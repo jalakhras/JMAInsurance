@@ -11,14 +11,14 @@ namespace JMAInsurance.EntityFramwork.DbContext
         {
             Database.SetInitializer<JMAInsuranceDbContext>(new DropCreateDatabaseIfModelChanges<JMAInsuranceDbContext>());
         }
-        public DbSet<Applicant> Applicants { get; set; }
-        public DbSet<Employment> Employment { get; set; }
-        public DbSet<Vehicle> Vehicles { get; set; }
-        public DbSet<Products> Products { get; set; }
-        public DbSet<Address> Addresses { get; set; }
-        public DbSet<MaritalStatus> MaritalStatus { get; set; }
-        public DbSet<Country> Countries { get; set; }
-        public DbSet<City> Cities { get; set; }
+        public virtual DbSet<Applicant> Applicants { get; set; }
+        public virtual DbSet<Employment> Employment { get; set; }
+        public virtual DbSet<Vehicle> Vehicles { get; set; }
+        public virtual DbSet<Products> Products { get; set; }
+        public virtual DbSet<Address> Addresses { get; set; }
+        public virtual DbSet<MaritalStatus> MaritalStatus { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
     }
 
     public class JMAInsuranceInitializer : DropCreateDatabaseIfModelChanges<JMAInsuranceDbContext>

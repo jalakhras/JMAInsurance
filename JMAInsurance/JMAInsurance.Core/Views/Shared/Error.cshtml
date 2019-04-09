@@ -1,0 +1,29 @@
+﻿@using EPM.Models
+@{
+    ViewBag.Title = T("LBL_Error");
+    Layout = "~/Areas/StrategyCenter/Views/Shared/_StrategyCenterWithoutSideMenu.cshtml";
+}
+<div id="page_content">
+    <div id="page_content_inner">
+        <div class="container">
+            <div class="uk-width-1-1">
+
+                <div class="md-card uk-margin-medium-bottom">
+                    <div class="md-card-content">
+                        <div class="uk-grid" data-uk-grid-margin>
+                            <div class="uk-width-large-1-1">
+                                <h2 style="text-align:center">@T("LBL_Error")</h2>
+                                <pre style="text-align:center">
+                                <h3>@T("MSG_ErrorMessage")</h3>  
+                                </pre>
+
+                            </div>
+                        </div>
+                        <div class="uk-grid" data-uk-grid-margin>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

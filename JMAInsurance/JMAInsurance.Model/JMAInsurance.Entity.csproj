@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -43,9 +46,33 @@
     <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +81,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomCode\AdUser.cs" />
+    <Compile Include="CustomCode\BaseRequest.cs" />
+    <Compile Include="CustomCode\BaseResponse.cs" />
+    <Compile Include="CustomCode\CustomComplexTypeAttributeConvention.cs" />
+    <Compile Include="CustomCode\ErrorLog.cs" />
+    <Compile Include="CustomCode\ErrorMessage.cs" />
+    <Compile Include="CustomCode\Extensions.cs" />
+    <Compile Include="CustomCode\InsertUpdateInterceptor.cs" />
+    <Compile Include="CustomCode\JQueryDataTableParamModel.cs" />
+    <Compile Include="CustomCode\MultiLanguageString.cs" />
+    <Compile Include="CustomCode\PaginationDTO.cs" />
+    <Compile Include="CustomCode\SessionManager.cs" />
+    <Compile Include="CustomCode\SoftDeleteAttribute.cs" />
+    <Compile Include="CustomCode\SoftDeleteInterceptor.cs" />
+    <Compile Include="CustomCode\SoftDeleteQueryVisitor.cs" />
+    <Compile Include="CustomCode\TasksCapacity.cs" />
+    <Compile Include="DomainBase.cs" />
     <Compile Include="Entity\Address.cs" />
     <Compile Include="Entity\Applicant.cs" />
     <Compile Include="Entity\City.cs" />
@@ -64,12 +108,30 @@
     <Compile Include="Entity\Progress.cs" />
     <Compile Include="Entity\Vehicle.cs" />
     <Compile Include="Entity\Year.cs" />
+    <Compile Include="Enum\AuthenticationMode.cs" />
+    <Compile Include="Enum\enum.cs" />
+    <Compile Include="Enum\ReferenceTypeEnum.cs" />
+    <Compile Include="JMAInsurance.DataAccess\IDbContext.cs" />
+    <Compile Include="JMAInsurance.DataAccess\Implementation\Extensions.cs" />
+    <Compile Include="JMAInsurance.DataAccess\Implementation\Repository.cs" />
+    <Compile Include="JMAInsurance.DataAccess\Interface\IMobileRepository.cs" />
+    <Compile Include="JMAInsurance.DataAccess\Interface\IRepository.cs" />
+    <Compile Include="JMAInsurance.DataAccess\JMAInsuranceContext.cs" />
+    <Compile Include="IAuditable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Delegation.cs" />
+    <Compile Include="Security\Permission.cs" />
+    <Compile Include="Security\PermissionCategory.cs" />
+    <Compile Include="Security\User.cs" />
+    <Compile Include="Security\UserPermission.cs" />
+    <Compile Include="Security\UsersAccessLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

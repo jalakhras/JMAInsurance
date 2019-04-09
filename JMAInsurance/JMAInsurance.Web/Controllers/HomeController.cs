@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using JMAInsurance.Application.Service;
 using System.Web.Mvc;
 
 namespace JMAInsurance.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IApplicantService _applicantService;
+      
+
+        public HomeController(IApplicantService applicantService)
+        {
+            _applicantService = applicantService;
+        }
         public ActionResult Index()
         {
+            _applicantService.GetAll();
             return View();
         }
 
