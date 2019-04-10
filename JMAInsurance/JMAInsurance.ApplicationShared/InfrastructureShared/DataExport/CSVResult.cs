@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-namespace JMAInsurance.ApplicationShared.Infrastructure
+namespace JMAInsurance.ApplicationShared.InfrastructureShared.DataExport
 {
     public class CSVResult : FileResult
     {

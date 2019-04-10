@@ -10,5 +10,6 @@ namespace JMAInsurance.Application.Service.Applicants
         void Create(ApplicantDto applicantDto);
         void Update(ApplicantDto applicantDto);
         IEnumerable<ApplicantDto> GetAll();
+        void UpdateWorkFlowStage(ApplicantDto applicantDto, int CurrentStage);
     }
 }

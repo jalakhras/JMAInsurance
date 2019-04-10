@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using JMAInsurance.Application.Service.Applicants;
+using JMAInsurance.ApplicationShared.InfrastructureShared.ActionFilter;
 using JMAInsurance.Models.Dto;
 using JMAInsurance.Models.ViewModel;
 using System;
@@ -7,6 +8,7 @@ using System.Web.Mvc;
 
 namespace JMAInsurance.Web.Controllers
 {
+    [WorkflowFilter(MinRequiredStage = (int)WorkflowValues.Begin,CurrentStage = (int)WorkflowValues.ApplicantInfo)]
     public class ApplicantController : Controller
     {
         private readonly IApplicantService _applicantService;

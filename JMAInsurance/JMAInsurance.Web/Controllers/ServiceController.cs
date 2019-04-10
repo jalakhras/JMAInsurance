@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using JMAInsurance.Application.Service.Applicants;
-using JMAInsurance.ApplicationShared.Infrastructure;
+using JMAInsurance.ApplicationShared.InfrastructureShared.DataExport;
 using JMAInsurance.Models.ViewModel;
 using System.Collections.Generic;
 using System.Web.Mvc;

@@ -36,12 +36,20 @@ namespace JMAInsurance.Application.Service.Applicants
             return ApplicantDto;
 
         }
+
+       
+
         public void Update(ApplicantDto applicantDto)
         {
             _repositoryApplicant.Update(Mapper.Map<Applicant>(applicantDto));
             _repositoryApplicant.Save();
         }
-
+        public void UpdateWorkFlowStage(ApplicantDto applicantDto, int CurrentStage)
+        {
+            applicantDto.WorkFlowStage = CurrentStage;
+            _repositoryApplicant.Update(Mapper.Map<Applicant>(applicantDto));
+            _repositoryApplicant.Save();
+        }
 
     }
 }

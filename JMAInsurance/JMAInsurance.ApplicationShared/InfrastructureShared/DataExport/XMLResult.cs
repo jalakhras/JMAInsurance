@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Xml.Serialization;
 
-namespace JMAInsurance.ApplicationShared.Infrastructure
+namespace JMAInsurance.ApplicationShared.InfrastructureShared.DataExport
 { 
     public class XMLResult : ActionResult
     {

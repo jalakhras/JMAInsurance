@@ -114,8 +114,10 @@
     <Compile Include="ConfigurationMapper\AutoMapperConfiguration.cs" />
     <Compile Include="ConfigurationMapper\DataConverter.cs" />
     <Compile Include="ConfigurationMapper\IDataConverter.cs" />
-    <Compile Include="Infrastructure\CSVResult.cs" />
-    <Compile Include="Infrastructure\XMLResult.cs" />
+    <Compile Include="InfrastructureShared\ActionFilter\WorkflowFilter.cs" />
+    <Compile Include="InfrastructureShared\ActionFilter\WorkflowValuesEnum.cs" />
+    <Compile Include="InfrastructureShared\DataExport\CSVResult.cs" />
+    <Compile Include="InfrastructureShared\DataExport\XMLResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

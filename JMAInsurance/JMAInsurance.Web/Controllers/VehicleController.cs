@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using JMAInsurance.Application.Service.Applicants;
 using JMAInsurance.Application.Service.Vehicle;
+using JMAInsurance.ApplicationShared.InfrastructureShared.ActionFilter;
 using JMAInsurance.Models.ViewModel;
 using System;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace JMAInsurance.Web.Controllers
 {
+    [WorkflowFilter( MinRequiredStage = (int)WorkflowValues.EmploymentInfo, CurrentStage = (int)WorkflowValues.VehicleInfo)]
     public class VehicleController : Controller
     {
         private readonly IApplicantService _applicantService;

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using JMAInsurance.Application.Service.Address;
 using JMAInsurance.Application.Service.Applicants;
+using JMAInsurance.ApplicationShared.InfrastructureShared.ActionFilter;
 using JMAInsurance.Models.Dto;
 using JMAInsurance.Models.ViewModel;
 using System;
@@ -9,6 +10,7 @@ using System.Web.Mvc;
 
 namespace JMAInsurance.Web.Controllers
 {
+    [WorkflowFilter(MinRequiredStage = (int)WorkflowValues.ApplicantInfo, CurrentStage = (int)WorkflowValues.AddressInfo)]
     public class AddressController : Controller
     {
         private readonly IApplicantService _applicantService; 
@@ -55,7 +57,7 @@ namespace JMAInsurance.Web.Controllers
 
                 if (existingMain != null)
                 {
-                   
+                    existingMain = Mapper.Map<AddressDto>(addressesVM.MainAddress);
                     _addressService.Update(existingMain);
                 }
                 else
@@ -63,20 +65,26 @@ namespace JMAInsurance.Web.Controllers
                     addressesVM.MainAddress.IsMailing = false;
                     var newMainAddress = Mapper.Map<AddressDto>(addressesVM.MainAddress);
                     applicant.Addresses.Add(newMainAddress);
+                    
                 }
 
                 //Check if mailing address already exists, if so update it
                 var existingMailing = _addressService.GetAddressbyApplicantId(applicant.Id, true);
                 if (existingMailing != null)
                 {
+                    existingMailing =  Mapper.Map<AddressDto>(addressesVM.MailingAddress);
                     _addressService.Update(existingMailing);
                 }
                 else
                 {
                     addressesVM.MailingAddress.IsMailing = true;
+                    addressesVM.MailingAddress.ApplicantId = applicant.Id;
                     var newMailingAddress = Mapper.Map<AddressDto>(addressesVM.MainAddress);
                     addressesVM.MainAddress.IsMailing = false;
+                    addressesVM.MainAddress.ApplicantId = applicant.Id;
                     applicant.Addresses.Add(newMailingAddress);
+                    _addressService.Create(newMailingAddress);
+
                 }
                 return RedirectToAction("EmploymentInfo", "Employment");
             }
