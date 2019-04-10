@@ -18,7 +18,7 @@ namespace JMAInsurance.Web.Controllers
             _applicantService = applicantService;
             _productsService = productsService;
         }
-        // GET: Products
+        [HttpGet]
         public ActionResult ProductInfo()
         {
             if (Session["Tracker"] == null)
