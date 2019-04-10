@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using JMAInsurance.Models.Dto;
 
 namespace JMAInsurance.Application.Service.Address
 {
-   public interface IAddressService
+    public interface IAddressService
     {
+        void Create(AddressDto addressDto);
+        void Update(AddressDto addressDto);
+        AddressDto GetAddressbyApplicantId(int ApplicantId , bool IsMailing);
 
     }
 }

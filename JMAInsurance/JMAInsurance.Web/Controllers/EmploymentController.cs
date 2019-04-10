@@ -42,7 +42,7 @@ namespace JMAInsurance.Web.Controllers
             return View(employment);
         }
         [HttpPost]
-        public ActionResult EmploymentInfo(Employments vm)
+        public ActionResult EmploymentInfo(Employments employments)
         {
             if (Session["Tracker"] == null)
             {
@@ -57,12 +57,19 @@ namespace JMAInsurance.Web.Controllers
                 var existingEmployment = applicant.Employment.FirstOrDefault(x => x.IsPrimary);
                 if (existingEmployment != null)
                 {
-                    Mapper.Map(vm.PrimaryEmployer, existingEmployment);
+                  
                     _employmentService.Update(existingEmployment);
                 }
                 else
                 {
-                    var newEmployment = Mapper.Map<EmploymentDto>(vm.PrimaryEmployer);
+                    //vm.PrimaryEmployer
+                    //var newEmployment = Mapper.Map<EmploymentDto>(employments.PrimaryEmployer);
+                    var newEmployment = new EmploymentDto();
+                    newEmployment.Employer = employments.PrimaryEmployer.Employer;
+                    newEmployment.EmploymentType = employments.PrimaryEmployer.EmploymentType;
+                    newEmployment.GrossMonthlyIncome = employments.PrimaryEmployer.GrossMonthlyIncome;
+                    newEmployment.Position = employments.PrimaryEmployer.Position;
+                    newEmployment.StartDate = employments.PrimaryEmployer.StartDate;
                     newEmployment.IsPrimary = true;
                     _employmentService.Create(newEmployment);
                 }
@@ -71,12 +78,24 @@ namespace JMAInsurance.Web.Controllers
                 var existingPrevious = applicant.Employment.FirstOrDefault(x => x.IsPrimary == false);
                 if (existingPrevious != null)
                 {
-                    Mapper.Map(vm.PreviousEmployer, existingPrevious);
+                    //Mapper.Map(employments.PreviousEmployer, existingPrevious);
+                    var newEmployment = new EmploymentDto();
+                    newEmployment.Employer = employments.PreviousEmployer.Employer;
+                    newEmployment.EmploymentType = employments.PreviousEmployer.EmploymentType;
+                    newEmployment.GrossMonthlyIncome = employments.PreviousEmployer.GrossMonthlyIncome;
+                    newEmployment.Position = employments.PreviousEmployer.Position;
+                    newEmployment.StartDate = employments.PreviousEmployer.StartDate;
                     _employmentService.Update(existingPrevious);
                 }
                 else
                 {
-                    var newEmployment = Mapper.Map<EmploymentDto>(vm.PreviousEmployer);
+                    //var newEmployment = Mapper.Map<EmploymentDto>(employments.PreviousEmployer);
+                    var newEmployment = new EmploymentDto();
+                    newEmployment.Employer = employments.PreviousEmployer.Employer;
+                    newEmployment.EmploymentType = employments.PreviousEmployer.EmploymentType;
+                    newEmployment.GrossMonthlyIncome = employments.PreviousEmployer.GrossMonthlyIncome;
+                    newEmployment.Position = employments.PreviousEmployer.Position;
+                    newEmployment.StartDate = employments.PreviousEmployer.StartDate;
                     newEmployment.IsPrimary = false;
                     _employmentService.Create(newEmployment);
                 }
