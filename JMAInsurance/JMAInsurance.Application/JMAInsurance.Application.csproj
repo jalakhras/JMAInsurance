@@ -76,8 +76,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\ApplicantService.cs" />
-    <Compile Include="Service\IApplicantService.cs" />
+    <Compile Include="Service\Address\IAddressService.cs" />
+    <Compile Include="Service\Applicants\ApplicantService.cs" />
+    <Compile Include="Service\Applicants\IApplicantService.cs" />
+    <Compile Include="Service\Employments\EmploymentService.cs" />
+    <Compile Include="Service\Employments\IEmploymentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JMAInsurance.EntityFramwork\JMAInsurance.EntityFramwork.csproj">

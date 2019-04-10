@@ -19,9 +19,10 @@ namespace JMAInsurance.Entity
         public double? Phone { get; set; }
         [Required]
         public string Email { get; set; }
-        public int MaritalStatusId { get; set; }
-        [ForeignKey("MaritalStatusId")]
-        public virtual  MaritalStatus MaritalStatus { get; set; }
+        //public int MaritalStatusId { get; set; }
+        //[ForeignKey("MaritalStatusId")]
+        //public virtual  MaritalStatus MaritalStatus { get; set; }
+        public string MaritalStatus { get; set; }
         public string HighestEducation { get; set; }
         public string LicenseStatus { get; set; }
         public string YearsLicensed { get; set; }

@@ -1,10 +1,9 @@
 ﻿using JMAInsurance.Entity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 
 namespace JMAInsurance.EntityFramwork.DbContext
 {
-    public class JMAInsuranceDbContext : IdentityDbContext<IdentityUser>
+    public class JMAInsuranceDbContext : System.Data.Entity.DbContext
     {
         public JMAInsuranceDbContext()
                 : base("name=JMAInsuranceConnction")
