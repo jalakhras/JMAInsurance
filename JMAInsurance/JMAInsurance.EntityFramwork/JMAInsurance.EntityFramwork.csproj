@@ -172,6 +172,14 @@
     <Compile Include="Migrations\201904100826541_EditApplicantTableAndRemoveIdentityUser.Designer.cs">
       <DependentUpon>201904100826541_EditApplicantTableAndRemoveIdentityUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904101313260_EditAddressTable.cs" />
+    <Compile Include="Migrations\201904101313260_EditAddressTable.Designer.cs">
+      <DependentUpon>201904101313260_EditAddressTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904101354199_EditVehiclesTable.cs" />
+    <Compile Include="Migrations\201904101354199_EditVehiclesTable.Designer.cs">
+      <DependentUpon>201904101354199_EditVehiclesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Extensions.cs" />
@@ -185,6 +193,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904100826541_EditApplicantTableAndRemoveIdentityUser.resx">
       <DependentUpon>201904100826541_EditApplicantTableAndRemoveIdentityUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904101313260_EditAddressTable.resx">
+      <DependentUpon>201904101313260_EditAddressTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904101354199_EditVehiclesTable.resx">
+      <DependentUpon>201904101354199_EditVehiclesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -8,6 +8,6 @@ namespace JMAInsurance.Application.Service.Applicants
         ApplicantDto GetApplicantsByTraker(Guid traker);
         void Create(ApplicantDto applicantDto);
         void Update(ApplicantDto applicantDto);
-        //ApplicantDto GetApplicantsIsMailing(bool IsMailing);
+        //ApplicantDto GetApplicantsIsMain(Guid traker, bool IsMailing);
     }
 }

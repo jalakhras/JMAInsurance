@@ -8,6 +8,9 @@ using JMAInsurance.EntityFramwork.Repository;
 using JMAInsurance.Entity;
 using JMAInsurance.Application.Service.Applicants;
 using JMAInsurance.Application.Service.Employments;
+using JMAInsurance.Application.Service.Products;
+using JMAInsurance.Application.Service.Address;
+using JMAInsurance.Application.Service.Vehicle;
 
 namespace JMAInsurance.ApplicationShared
 {
@@ -16,21 +19,23 @@ namespace JMAInsurance.ApplicationShared
         public static void RegisterComponents()
         {
 			var container = new UnityContainer();
-            // register all your components with the container here
-            // it is NOT necessary to register your controllers
-            // e.g. container.RegisterType<ITestService, TestService>();
-            // context
+             // context
             container.RegisterType<JMAInsuranceDbContext>();
             container.RegisterType<DbContext, JMAInsuranceDbContext>();
             //container.RegisterType<IRepository<>(), Repository<>>();
             container.RegisterType<IRepository<Applicant>, Repository<Applicant>>();
             container.RegisterType<IRepository<Employment>, Repository<Employment>>();
+            container.RegisterType<IRepository<Products>, Repository<Products>>();
+            container.RegisterType<IRepository<Address>, Repository<Address>>();
+            container.RegisterType<IRepository<Vehicle>, Repository<Vehicle>>();
             // services
             container.RegisterType<IApplicantService, ApplicantService>();
             container.RegisterType<IEmploymentService, EmploymentService>();
+            container.RegisterType<IProductsService, ProductsService>();
+            container.RegisterType<IAddressService, AddressService>();
+            container.RegisterType<IVehicleService, VehicleService>();
             // repositories
             //container.RegisterType<IApplicantService, ApplicantService>();
-
             // converter
             AutoMapperConfiguration.Initialize();
             container.RegisterType<IDataConverter, DataConverter>();

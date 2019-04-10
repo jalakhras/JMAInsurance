@@ -168,6 +168,8 @@
     <Compile Include="Controllers\ApplicantController.cs" />
     <Compile Include="Controllers\EmploymentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\VehicleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -261,10 +263,12 @@
     <Content Include="Views\Applicant\ApplicantInfo.cshtml" />
     <Content Include="Views\Shared\ProgressBar.cshtml" />
     <Content Include="Views\Employment\EmploymentInfo.cshtml" />
+    <Content Include="Views\Vehicle\VehicleInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Products\" />
     <Folder Include="Views\ScriptViews\" />
   </ItemGroup>
   <ItemGroup>

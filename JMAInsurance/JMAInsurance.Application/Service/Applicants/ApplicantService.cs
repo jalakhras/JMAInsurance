@@ -29,6 +29,7 @@ namespace JMAInsurance.Application.Service.Applicants
 
         }
 
+       
         public void Update(ApplicantDto applicantDto)
         {
             _repositoryApplicant.Update(Mapper.Map<Applicant>(applicantDto));
