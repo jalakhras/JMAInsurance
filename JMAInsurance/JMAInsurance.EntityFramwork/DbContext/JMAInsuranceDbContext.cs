@@ -1,15 +1,14 @@
 ﻿using JMAInsurance.Entity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 
 namespace JMAInsurance.EntityFramwork.DbContext
 {
-    public class JMAInsuranceDbContext : IdentityDbContext<IdentityUser>
+    public class JMAInsuranceDbContext : System.Data.Entity.DbContext
     {
         public JMAInsuranceDbContext()
                 : base("name=JMAInsuranceConnction")
         {
-            Database.SetInitializer<JMAInsuranceDbContext>(new DropCreateDatabaseIfModelChanges<JMAInsuranceDbContext>());
+            //Database.SetInitializer<JMAInsuranceDbContext>(new DropCreateDatabaseIfModelChanges<JMAInsuranceDbContext>());
         }
         public virtual DbSet<Applicant> Applicants { get; set; }
         public virtual DbSet<Employment> Employment { get; set; }

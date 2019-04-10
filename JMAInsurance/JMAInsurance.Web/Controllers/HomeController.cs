@@ -1,36 +1,47 @@
-﻿using JMAInsurance.ApplicationShared.Service;
+﻿using JMAInsurance.Application.Service.Applicants;
+using JMAInsurance.Models.Dto;
+using JMAInsurance.Web.ViewModels;
+using System;
 using System.Web.Mvc;
 
 namespace JMAInsurance.Web.Controllers
 {
+    [OverrideAuthorization]
     public class HomeController : Controller
     {
-        private readonly IApplicantService  _applicantService;
-
-
+        private readonly IApplicantService _applicantService;
         public HomeController(IApplicantService applicantService)
         {
             _applicantService = applicantService;
         }
-
         public ActionResult Index()
         {
-            _applicantService.GetAll();
+            ViewBag.Home = "true";
             return View();
         }
-
-        public ActionResult About()
+        public ActionResult Final()
         {
-            ViewBag.Message = "Your application description page.";
-
+            Session.Clear();
             return View();
         }
-
-        public ActionResult Contact()
+        public ActionResult Clear()
         {
-            ViewBag.Message = "Your contact page.";
-
+            Session.Clear();
             return View();
         }
+        public ActionResult ProgressBar(int currentStage)
+        {
+            if (Session["Tracker"] != null)
+            {
+                Guid tracker = (Guid)Session["Tracker"];
+                var Applicant = _applicantService.GetApplicantsByTraker(tracker);
+                var highestStage = Applicant!=null ? Applicant.WorkFlowStage :0;
+                return PartialView(new ProgressVM { CurrentStage = currentStage, HighestStage = highestStage });
+            }
+            else
+                return PartialView(new ProgressVM { CurrentStage = 10, HighestStage = 10 });
+            
+        }
+
     }
 }
