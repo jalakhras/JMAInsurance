@@ -3,6 +3,7 @@ using JMAInsurance.Entity;
 using JMAInsurance.EntityFramwork.Repository;
 using JMAInsurance.Models.Dto;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace JMAInsurance.Application.Service.Applicants
@@ -19,6 +20,15 @@ namespace JMAInsurance.Application.Service.Applicants
             _repositoryApplicant.Create(Mapper.Map<Applicant>(applicantDto));
             _repositoryApplicant.Save();
         }
+
+        public IEnumerable<ApplicantDto> GetAll()
+        {
+            var applicants = _repositoryApplicant.GetAll();
+
+            var ApplicantDto = Mapper.Map<IEnumerable<ApplicantDto>>(applicants);
+            return ApplicantDto.ToList();
+        }
+
         public ApplicantDto GetApplicantsByTraker(Guid tracker)
         {
             var Applicant = _repositoryApplicant.Get(x => x.ApplicantTracker == tracker).FirstOrDefault();
@@ -31,7 +41,7 @@ namespace JMAInsurance.Application.Service.Applicants
             _repositoryApplicant.Update(Mapper.Map<Applicant>(applicantDto));
             _repositoryApplicant.Save();
         }
-      
+
 
     }
 }

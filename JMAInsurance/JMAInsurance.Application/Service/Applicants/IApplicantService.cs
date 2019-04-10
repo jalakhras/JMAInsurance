@@ -1,5 +1,6 @@
 ﻿using JMAInsurance.Models.Dto;
 using System;
+using System.Collections.Generic;
 
 namespace JMAInsurance.Application.Service.Applicants
 {
@@ -8,6 +9,6 @@ namespace JMAInsurance.Application.Service.Applicants
         ApplicantDto GetApplicantsByTraker(Guid traker);
         void Create(ApplicantDto applicantDto);
         void Update(ApplicantDto applicantDto);
-        //ApplicantDto GetApplicantsIsMain(Guid traker, bool IsMailing);
+        IEnumerable<ApplicantDto> GetAll();
     }
 }

@@ -2,6 +2,7 @@
 using JMAInsurance.Entity;
 using JMAInsurance.Models.Dto;
 using JMAInsurance.Models.ViewModel;
+using System.Collections.Generic;
 
 namespace JMAInsurance.ApplicationShared.ConfigurationMapper
 {
@@ -28,8 +29,10 @@ namespace JMAInsurance.ApplicationShared.ConfigurationMapper
                     .ForMember(dest => dest.Vehicle, opt => opt.MapFrom(src => src.Vehicle))
                     .ForMember(dest => dest.WorkFlowStage, opt => opt.MapFrom(src => src.WorkFlowStage))
                     .ForMember(dest => dest.YearsLicensed, opt => opt.MapFrom(src => src.YearsLicensed))
-
                     .ReverseMap();
+
+                //cfg.CreateMap<IEnumerable<Applicant>, IEnumerable<ApplicantDto>>()
+                //    .ReverseMap();
 
                 cfg.CreateMap<Employment, EmploymentDto>()
                     .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
@@ -64,6 +67,9 @@ namespace JMAInsurance.ApplicationShared.ConfigurationMapper
                     .ForMember(dest => dest.YearsLicensed, opt => opt.MapFrom(src => src.YearsLicensed))
                     .ReverseMap();
 
+                //cfg.CreateMap<IEnumerable<ApplicantDto>, IEnumerable<ApplicantVM>>()
+                //    .ReverseMap();
+
                 cfg.CreateMap<EmploymentDto, EmploymentVM>()
                     .ForMember(dest => dest.Employer, opt => opt.MapFrom(src => src.Employer))
                     .ForMember(dest => dest.EmploymentType, opt => opt.MapFrom(src => src.EmploymentType))
@@ -97,7 +103,7 @@ namespace JMAInsurance.ApplicationShared.ConfigurationMapper
                    .ForMember(dest => dest.Year, opt => opt.MapFrom(src => src.Year))
                    .ReverseMap();
 
-               
+
 
 
 
