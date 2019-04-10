@@ -9,6 +9,7 @@ namespace JMAInsurance.Web.ConfigurationMapper
     {
         public static void Initialize()
         {
+            Mapper.Reset();
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<ApplicantDto, ApplicantVM>()

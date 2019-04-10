@@ -11,6 +11,7 @@ namespace JMAInsurance.Web.ViewModels
         [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
+        public Guid ApplicantTracker { get; set; }
         [Required]
         [Display(Name = "Date of Birth")]
         public DateTime? Dob { get; set; }

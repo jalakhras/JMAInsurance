@@ -15,21 +15,7 @@ namespace JMAInsurance.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-           // AutoMapperConfiguration.Initialize();
-            //Mapper.CreateMap<ApplicantVM, ApplicantDto>();
-            //Mapper.CreateMap<VehicleVM, VehicleDto>();
-            //Mapper.CreateMap<AddressVM, AddressDto>();
-            //Mapper.CreateMap<EmploymentVM, EmploymentDto>();
-            //Mapper.CreateMap<ProductsVM, ProductsDto>();
-
-            //Mapper.CreateMap<Applicant, ApplicantVM>();
-            //Mapper.CreateMap<Vehicle, VehicleVMDto>();
-            //Mapper.CreateMap<Address, AddressVMDto>();
-            //Mapper.CreateMap<Employment, EmploymentVMDto>();
-            //Mapper.CreateMap<Products, ProductsVMDto>();
-
-
-
+            AutoMapperConfiguration.Initialize();
         }
     }
 }

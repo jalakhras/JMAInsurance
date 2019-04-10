@@ -18,13 +18,18 @@ namespace JMAInsurance.Web.Controllers
         [HttpGet]
         public ActionResult ApplicantInfo()
         {
-            var applicant = new ApplicantVM();
+            var applicantVM = new ApplicantVM();
             if (Session["Tracker"] != null)
             {
                 var tracker = (Guid)Session["Tracker"];
-                applicant = Mapper.Map<ApplicantDto, ApplicantVM>(_applicantService.GetApplicantsByTraker(tracker));
+                var applicant = Mapper.Map<ApplicantDto, ApplicantVM>(_applicantService.GetApplicantsByTraker(tracker));
+
+                if (applicant != null)
+                    applicantVM = applicant;
+                else
+                    applicantVM.ApplicantTracker = tracker;
             }
-            return View(applicant);
+            return View(applicantVM);
         }
 
 
@@ -44,35 +49,12 @@ namespace JMAInsurance.Web.Controllers
                 if (existingApplicant != null)
                 {
 
-                    // Mapper.Map(vm, existingApplicant);
-                    existingApplicant.FirstName = vm.FirstName;
-                    existingApplicant.LastName = vm.LastName;
-                    existingApplicant.Email = vm.Email;
-                    existingApplicant.Dob = vm.Dob;
-                    existingApplicant.HighestEducation = vm.HighestEducation;
-                    existingApplicant.LicenseStatus = vm.LicenseStatus;
-                    existingApplicant.MaritalStatus = vm.MaritalStatus;
-                    existingApplicant.LicenseStatus = vm.LicenseStatus;
-                    existingApplicant.Phone = vm.Phone;
-                    existingApplicant.YearsLicensed = vm.YearsLicensed;
-                    existingApplicant.ApplicantTracker = tracker;
+                    Mapper.Instance.Map(vm, existingApplicant);
                     _applicantService.Update(existingApplicant);
                 }
                 else
                 {
-                    var newApplicant =  new ApplicantDto() ;
-                    newApplicant.FirstName = vm.FirstName;
-                    newApplicant.LastName = vm.LastName;
-                    newApplicant.Email = vm.Email;
-                    newApplicant.Dob = vm.Dob;
-                    newApplicant.HighestEducation = vm.HighestEducation;
-                    newApplicant.LicenseStatus = vm.LicenseStatus;
-                    newApplicant.MaritalStatus = vm.MaritalStatus ;
-                    newApplicant.LicenseStatus = vm.LicenseStatus;
-                    newApplicant.Phone = vm.Phone;
-                    newApplicant.YearsLicensed = vm.YearsLicensed;
-                    newApplicant.ApplicantTracker = tracker;
-                    _applicantService.Create(newApplicant);
+                    _applicantService.Create(Mapper.Map<ApplicantDto>(vm));
                 }
 
                 return RedirectToAction("AddressInfo", "Address");
