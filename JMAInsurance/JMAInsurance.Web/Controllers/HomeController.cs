@@ -1,6 +1,5 @@
 ﻿using JMAInsurance.Application.Service.Applicants;
-using JMAInsurance.Models.Dto;
-using JMAInsurance.Web.ViewModels;
+using JMAInsurance.Models.ViewModel;
 using System;
 using System.Web.Mvc;
 

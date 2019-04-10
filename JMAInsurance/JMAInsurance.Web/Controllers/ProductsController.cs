@@ -2,7 +2,7 @@
 using JMAInsurance.Application.Service.Applicants;
 using JMAInsurance.Application.Service.Products;
 using JMAInsurance.Models.Dto;
-using JMAInsurance.ViewModels;
+using JMAInsurance.Models.ViewModel;
 using System;
 using System.Linq;
 using System.Web.Mvc;
@@ -31,22 +31,22 @@ namespace JMAInsurance.Web.Controllers
             var existingProducts = _applicantService.GetApplicantsByTraker(tracker)?.Products.FirstOrDefault();
             if (existingProducts != null)
             {
-                //products = Mapper.Map<ProductsVM>(existingProducts);
-                products.Collision = existingProducts.Collision;
-                products.Comprehensive = existingProducts.Comprehensive;
-                products.DriverRewards = existingProducts.DriverRewards;
-                products.Liability = existingProducts.Liability;
-                products.LoanPayoff = existingProducts.LoanPayoff;
-                products.PropertyDamage = existingProducts.PropertyDamage;
-                products.Rental = existingProducts.Rental;
-                products.RoadSideAssistance = existingProducts.RoadSideAssistance;
+                products = Mapper.Map<ProductsVM>(existingProducts);
+                //products.Collision = existingProducts.Collision;
+                //products.Comprehensive = existingProducts.Comprehensive;
+                //products.DriverRewards = existingProducts.DriverRewards;
+                //products.Liability = existingProducts.Liability;
+                //products.LoanPayoff = existingProducts.LoanPayoff;
+                //products.PropertyDamage = existingProducts.PropertyDamage;
+                //products.Rental = existingProducts.Rental;
+                //products.RoadSideAssistance = existingProducts.RoadSideAssistance;
             }
 
             return View(products);
         }
 
         [HttpPost]
-        public ActionResult ProductInfo(ProductsVM vm)
+        public ActionResult ProductInfo(ProductsVM productsVM)
         {
             if (Session["Tracker"] == null)
             {
@@ -61,12 +61,12 @@ namespace JMAInsurance.Web.Controllers
                 var existingProducts = applicant.Products.FirstOrDefault();
                 if (existingProducts != null)
                 {
-                  Mapper.Map(vm, existingProducts);
-                    _productsService.Update(Mapper.Map(vm, existingProducts));
+                   var productsDto=  Mapper.Map(productsVM, existingProducts);
+                    _productsService.Update(productsDto);
                 }
                 else
                 {
-                    var newProducts = Mapper.Map<ProductsDto>(vm);
+                    var newProducts = Mapper.Map<ProductsDto>(productsVM);
                     applicant.Products.Add(newProducts);
                 }
                 return RedirectToAction("Final", "Home");

@@ -161,7 +161,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="ConfigurationMapper\AutoMapperConfiguration.cs" />
     <Compile Include="ConfigurationMapper\DataConverter.cs" />
     <Compile Include="ConfigurationMapper\IDataConverter.cs" />
     <Compile Include="Controllers\AddressController.cs" />
@@ -174,13 +173,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\AddressesVM.cs" />
-    <Compile Include="ViewModels\ApplicantVM.cs" />
-    <Compile Include="ViewModels\Employments.cs" />
-    <Compile Include="ViewModels\EmploymentVM.cs" />
-    <Compile Include="ViewModels\ProductsVM.cs" />
-    <Compile Include="ViewModels\ProgressVM.cs" />
-    <Compile Include="ViewModels\VehicleVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

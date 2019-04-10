@@ -59,6 +59,13 @@
     <Compile Include="Dto\VehicleDto.cs" />
     <Compile Include="Dto\YearDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\AddressesVM.cs" />
+    <Compile Include="ViewModel\ApplicantVM.cs" />
+    <Compile Include="ViewModel\Employments.cs" />
+    <Compile Include="ViewModel\EmploymentVM.cs" />
+    <Compile Include="ViewModel\ProductsVM.cs" />
+    <Compile Include="ViewModel\ProgressVM.cs" />
+    <Compile Include="ViewModel\VehicleVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

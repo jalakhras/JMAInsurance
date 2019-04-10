@@ -1,7 +1,8 @@
-﻿using JMAInsurance.Application.Service.Address;
+﻿using AutoMapper;
+using JMAInsurance.Application.Service.Address;
 using JMAInsurance.Application.Service.Applicants;
 using JMAInsurance.Models.Dto;
-using JMAInsurance.Web.ViewModels;
+using JMAInsurance.Models.ViewModel;
 using System;
 using System.Linq;
 using System.Web.Mvc;
@@ -60,15 +61,7 @@ namespace JMAInsurance.Web.Controllers
                 else
                 {
                     addressesVM.MainAddress.IsMailing = false;
-                    var newMainAddress = new AddressDto();
-                    newMainAddress.Id = addressesVM.MainAddress.Id;
-                    newMainAddress.IsMailing = addressesVM.MainAddress.IsMailing;
-                    newMainAddress.ApplicantId = addressesVM.MainAddress.ApplicantId;
-                    newMainAddress.City = addressesVM.MainAddress.City;
-                    newMainAddress.Country = addressesVM.MainAddress.Country;
-                    newMainAddress.State = addressesVM.MainAddress.State;
-                    newMainAddress.StreetAddress = addressesVM.MainAddress.StreetAddress;
-                    newMainAddress.Zip = addressesVM.MainAddress.Zip;
+                    var newMainAddress = Mapper.Map<AddressDto>(addressesVM.MainAddress);
                     applicant.Addresses.Add(newMainAddress);
                 }
 
@@ -81,20 +74,10 @@ namespace JMAInsurance.Web.Controllers
                 else
                 {
                     addressesVM.MailingAddress.IsMailing = true;
-                    //var newMailingAddress = Mapper.Map<Address>(vm.MailingAddress);
+                    var newMailingAddress = Mapper.Map<AddressDto>(addressesVM.MainAddress);
                     addressesVM.MainAddress.IsMailing = false;
-                    var newMailingAddress = new AddressDto();
-                    newMailingAddress.Id = addressesVM.MainAddress.Id;
-                    newMailingAddress.IsMailing = addressesVM.MainAddress.IsMailing;
-                    newMailingAddress.ApplicantId = addressesVM.MainAddress.ApplicantId;
-                    newMailingAddress.City = addressesVM.MainAddress.City;
-                    newMailingAddress.Country = addressesVM.MainAddress.Country;
-                    newMailingAddress.State = addressesVM.MainAddress.State;
-                    newMailingAddress.StreetAddress = addressesVM.MainAddress.StreetAddress;
-                    newMailingAddress.Zip = addressesVM.MainAddress.Zip;
                     applicant.Addresses.Add(newMailingAddress);
                 }
-                
                 return RedirectToAction("EmploymentInfo", "Employment");
             }
             return View();

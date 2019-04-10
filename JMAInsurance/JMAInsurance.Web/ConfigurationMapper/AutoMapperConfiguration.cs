@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using JMAInsurance.Models.Dto;
-using JMAInsurance.ViewModels;
-using JMAInsurance.Web.ViewModels;
+using JMAInsurance.Models.ViewModel;
 
 namespace JMAInsurance.Web.ConfigurationMapper
 {

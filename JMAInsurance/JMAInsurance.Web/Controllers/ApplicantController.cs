@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using JMAInsurance.Application.Service.Applicants;
 using JMAInsurance.Models.Dto;
-using JMAInsurance.Web.ViewModels;
+using JMAInsurance.Models.ViewModel;
 using System;
 using System.Web.Mvc;
 
@@ -14,7 +14,6 @@ namespace JMAInsurance.Web.Controllers
         {
             _applicantService = applicantService;
         }
-        // GET: Applicant
         [HttpGet]
         public ActionResult ApplicantInfo()
         {
@@ -34,7 +33,7 @@ namespace JMAInsurance.Web.Controllers
 
 
         [HttpPost]
-        public ActionResult ApplicantInfo(ApplicantVM vm)
+        public ActionResult ApplicantInfo(ApplicantVM applicantVM)
         {
 
             if (ModelState.IsValid)
@@ -49,18 +48,20 @@ namespace JMAInsurance.Web.Controllers
                 if (existingApplicant != null)
                 {
 
-                    Mapper.Instance.Map(vm, existingApplicant);
+                    Mapper.Map(applicantVM, existingApplicant);
                     _applicantService.Update(existingApplicant);
                 }
                 else
                 {
-                    _applicantService.Create(Mapper.Map<ApplicantDto>(vm));
+                    var applicantDto = Mapper.Map<ApplicantDto>(applicantVM);
+                    applicantDto.ApplicantTracker = tracker;
+                    _applicantService.Create(applicantDto);
                 }
 
                 return RedirectToAction("AddressInfo", "Address");
             }
 
-            return View(vm);
+            return View(applicantVM);
         }
     }
 }

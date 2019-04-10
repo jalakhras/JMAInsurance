@@ -14,13 +14,11 @@ namespace JMAInsurance.Application.Service.Applicants
         {
             _repositoryApplicant = repositoryApplicant;
         }
-
         public void Create(ApplicantDto applicantDto)
         {
             _repositoryApplicant.Create(Mapper.Map<Applicant>(applicantDto));
             _repositoryApplicant.Save();
         }
-
         public ApplicantDto GetApplicantsByTraker(Guid tracker)
         {
             var Applicant = _repositoryApplicant.Get(x => x.ApplicantTracker == tracker).FirstOrDefault();
@@ -28,8 +26,6 @@ namespace JMAInsurance.Application.Service.Applicants
             return ApplicantDto;
 
         }
-
-       
         public void Update(ApplicantDto applicantDto)
         {
             _repositoryApplicant.Update(Mapper.Map<Applicant>(applicantDto));

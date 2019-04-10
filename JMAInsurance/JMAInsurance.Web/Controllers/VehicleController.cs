@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
 using JMAInsurance.Application.Service.Applicants;
 using JMAInsurance.Application.Service.Vehicle;
-using JMAInsurance.Models.Dto;
-using JMAInsurance.ViewModels;
+using JMAInsurance.Models.ViewModel;
 using System;
 using System.Linq;
 using System.Web.Mvc;
@@ -52,19 +51,12 @@ namespace JMAInsurance.Web.Controllers
                 var existingVehicle = applicant.Vehicle.FirstOrDefault();
                 if (existingVehicle != null)
                 {
-                   var x =  Mapper.Map(vehicleVM, existingVehicle);
-                    //_context.Entry(existingVehicle).State = EntityState.Modified;
-                    _vehicleService.Update(Mapper.Map(vehicleVM, existingVehicle));
+                   var vehicleDto =  Mapper.Map(vehicleVM, existingVehicle);
+                    _vehicleService.Update(vehicleDto);
                 }
                 else
                 {
-                    var vehicle = new VehicleDto();
-                    vehicle.BodyType = vehicleVM.BodyType;
-                    vehicle.Make = vehicleVM.Make;
-                    vehicle.Model = vehicleVM.Model;
-                    vehicle.OwnLease = vehicleVM.OwnLease;
-                    vehicle.PrimaryUse = vehicleVM.PrimaryUse;
-                    vehicle.Year = vehicleVM.Year;
+                  var vehicle =   Mapper.Map(vehicleVM, existingVehicle);
                     applicant.Vehicle.Add(vehicle);
                 }
 
