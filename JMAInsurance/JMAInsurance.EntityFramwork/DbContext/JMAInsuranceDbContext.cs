@@ -9,7 +9,7 @@ namespace JMAInsurance.EntityFramwork.DbContext
         public JMAInsuranceDbContext()
                 : base("name=JMAInsuranceConnction")
         {
-            Database.SetInitializer<JMAInsuranceDbContext>(new DropCreateDatabaseIfModelChanges<JMAInsuranceDbContext>());
+            Database.Initialize(false);
         }
         public virtual DbSet<Applicant> Applicants { get; set; }
         public virtual DbSet<Employment> Employment { get; set; }

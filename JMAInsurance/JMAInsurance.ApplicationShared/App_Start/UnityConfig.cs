@@ -21,12 +21,11 @@ namespace JMAInsurance.ApplicationShared
             // context
             container.RegisterType<JMAInsuranceDbContext>();
             container.RegisterType<DbContext, JMAInsuranceDbContext>();
-            //container.RegisterType<IRepository<>(), Repository<>>();
-            container.RegisterType<IRepository<Applicant>, Repository<Applicant>>();
             // services
             container.RegisterType<IApplicantService, ApplicantService>();
+            //container.RegisterType<IRepository<>(), Repository<>>();
             // repositories
-            container.RegisterType<IApplicantService, ApplicantService>();
+            container.RegisterType<IRepository<Applicant>, Repository<Applicant>>();
 
             // converter
             AutoMapperConfiguration.Initialize();
