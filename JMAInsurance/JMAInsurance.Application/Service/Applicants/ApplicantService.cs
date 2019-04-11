@@ -29,15 +29,20 @@ namespace JMAInsurance.Application.Service.Applicants
             return ApplicantDto.ToList();
         }
 
-        public ApplicantDto GetApplicantsByTraker(Guid tracker)
+        public ApplicantDto GetApplicantsByTraker(Guid traker)
         {
-            var Applicant = _repositoryApplicant.Get(x => x.ApplicantTracker == tracker).FirstOrDefault();
+            var Applicant = _repositoryApplicant.Get(x => x.ApplicantTracker == traker).FirstOrDefault();
             var ApplicantDto = Mapper.Map<ApplicantDto>(Applicant);
             return ApplicantDto;
 
         }
 
-       
+        public ApplicantDto GetLazeApplicantsByTraker(Guid traker)
+        {
+            var Applicant = _repositoryApplicant.GetLazy(x => x.ApplicantTracker == traker).FirstOrDefault();
+            var ApplicantDto = Mapper.Map<ApplicantDto>(Applicant);
+            return ApplicantDto;
+        }
 
         public void Update(ApplicantDto applicantDto)
         {

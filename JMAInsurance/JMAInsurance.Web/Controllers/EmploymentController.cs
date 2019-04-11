@@ -22,10 +22,7 @@ namespace JMAInsurance.Web.Controllers
         }
         public ActionResult EmploymentInfo()
         {
-            if (Session["Tracker"] == null)
-            {
-                return RedirectToAction("ApplicantInfo", "Applicant");
-            }
+           
             var tracker = (Guid)Session["Tracker"];
 
             var employment = new Employments();
@@ -46,10 +43,7 @@ namespace JMAInsurance.Web.Controllers
         [HttpPost]
         public ActionResult EmploymentInfo(Employments employments)
         {
-            if (Session["Tracker"] == null)
-            {
-                return RedirectToAction("ApplicantInfo", "Applicant");
-            }
+            
             var tracker = (Guid)Session["Tracker"];
 
             if (ModelState.IsValid)

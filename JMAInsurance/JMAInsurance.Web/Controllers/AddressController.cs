@@ -23,10 +23,7 @@ namespace JMAInsurance.Web.Controllers
         [HttpGet]
         public ActionResult AddressInfo()
         {
-            if (Session["Tracker"] == null)
-            {
-                return RedirectToAction("ApplicantInfo", "Applicant");
-            }
+           
             var tracker = (Guid)Session["Tracker"];
             var addresses = new AddressesVM();
             var applicant = _applicantService.GetApplicantsByTraker(tracker);
@@ -57,23 +54,29 @@ namespace JMAInsurance.Web.Controllers
 
                 if (existingMain != null)
                 {
-                    existingMain = Mapper.Map<AddressDto>(addressesVM.MainAddress);
-                    _addressService.Update(existingMain);
+                   var existingMainToUpdate = Mapper.Map<AddressDto>(addressesVM.MainAddress);
+                    if(existingMainToUpdate != existingMain)
+                    _addressService.Update(existingMainToUpdate);
                 }
                 else
                 {
                     addressesVM.MainAddress.IsMailing = false;
                     var newMainAddress = Mapper.Map<AddressDto>(addressesVM.MainAddress);
                     applicant.Addresses.Add(newMainAddress);
-                    
+                    newMainAddress.ApplicantId = applicant.Id;
+
+                    _addressService.Create(newMainAddress);
+
+
                 }
 
                 //Check if mailing address already exists, if so update it
                 var existingMailing = _addressService.GetAddressbyApplicantId(applicant.Id, true);
                 if (existingMailing != null)
                 {
-                    existingMailing =  Mapper.Map<AddressDto>(addressesVM.MailingAddress);
-                    _addressService.Update(existingMailing);
+                   var  existingMailingToUpdate =  Mapper.Map<AddressDto>(addressesVM.MailingAddress);
+                    if(existingMailingToUpdate !=existingMailing)
+                    _addressService.Update(existingMailingToUpdate);
                 }
                 else
                 {

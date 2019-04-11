@@ -23,7 +23,7 @@ namespace JMAInsurance.Application.Service.Address
         }
         public AddressDto GetAddressbyApplicantId(int ApplicantId, bool IsMailing)
         {
-            var address = _repositoryAddress.Get(x => x.ApplicantId == ApplicantId && x.IsMailing == IsMailing).FirstOrDefault();
+            var address = _repositoryAddress.GetLazy(x => x.ApplicantId == ApplicantId && x.IsMailing == IsMailing).FirstOrDefault();
             var addressDto = Mapper.Map<AddressDto>(address);
             return addressDto; 
         }

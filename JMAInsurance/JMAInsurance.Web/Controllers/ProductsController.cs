@@ -23,10 +23,7 @@ namespace JMAInsurance.Web.Controllers
         [HttpGet]
         public ActionResult ProductInfo()
         {
-            if (Session["Tracker"] == null)
-            {
-                return RedirectToAction("ApplicantInfo", "Applicant");
-            }
+           
             var tracker = (Guid)Session["Tracker"];
 
             var products = new ProductsVM();

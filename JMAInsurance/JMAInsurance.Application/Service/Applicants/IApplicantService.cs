@@ -7,6 +7,7 @@ namespace JMAInsurance.Application.Service.Applicants
     public interface IApplicantService
     {
         ApplicantDto GetApplicantsByTraker(Guid traker);
+        ApplicantDto GetLazeApplicantsByTraker(Guid traker);
         void Create(ApplicantDto applicantDto);
         void Update(ApplicantDto applicantDto);
         IEnumerable<ApplicantDto> GetAll();

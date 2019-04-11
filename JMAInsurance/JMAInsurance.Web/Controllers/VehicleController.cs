@@ -21,10 +21,7 @@ namespace JMAInsurance.Web.Controllers
         }
         public ActionResult VehicleInfo()
         {
-            if (Session["Tracker"] == null)
-            {
-                return RedirectToAction("ApplicantInfo", "Applicant");
-            }
+           
             var tracker = (Guid)Session["Tracker"];
 
             var vehicle = new VehicleVM();

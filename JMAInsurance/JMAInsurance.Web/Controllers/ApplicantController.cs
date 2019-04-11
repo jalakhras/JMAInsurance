@@ -46,7 +46,7 @@ namespace JMAInsurance.Web.Controllers
                 }
                 var tracker = (Guid)Session["Tracker"];
 
-                var existingApplicant = _applicantService.GetApplicantsByTraker(tracker);
+                var existingApplicant = _applicantService.GetLazeApplicantsByTraker(tracker);
                 if (existingApplicant != null)
                 {
 

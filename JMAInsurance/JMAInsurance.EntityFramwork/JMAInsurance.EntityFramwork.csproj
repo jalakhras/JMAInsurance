@@ -168,17 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbContext\JMAInsuranceDbContext.cs" />
-    <Compile Include="Migrations\201904100826541_EditApplicantTableAndRemoveIdentityUser.cs" />
-    <Compile Include="Migrations\201904100826541_EditApplicantTableAndRemoveIdentityUser.Designer.cs">
-      <DependentUpon>201904100826541_EditApplicantTableAndRemoveIdentityUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904101313260_EditAddressTable.cs" />
-    <Compile Include="Migrations\201904101313260_EditAddressTable.Designer.cs">
-      <DependentUpon>201904101313260_EditAddressTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904101354199_EditVehiclesTable.cs" />
-    <Compile Include="Migrations\201904101354199_EditVehiclesTable.Designer.cs">
-      <DependentUpon>201904101354199_EditVehiclesTable.cs</DependentUpon>
+    <Compile Include="Migrations\201904112109183_EditDB.cs" />
+    <Compile Include="Migrations\201904112109183_EditDB.Designer.cs">
+      <DependentUpon>201904112109183_EditDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -191,21 +183,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904100826541_EditApplicantTableAndRemoveIdentityUser.resx">
-      <DependentUpon>201904100826541_EditApplicantTableAndRemoveIdentityUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904101313260_EditAddressTable.resx">
-      <DependentUpon>201904101313260_EditAddressTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904101354199_EditVehiclesTable.resx">
-      <DependentUpon>201904101354199_EditVehiclesTable.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\JMAInsurance.Model\JMAInsurance.Entity.csproj">
       <Project>{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}</Project>
       <Name>JMAInsurance.Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904112109183_EditDB.resx">
+      <DependentUpon>201904112109183_EditDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

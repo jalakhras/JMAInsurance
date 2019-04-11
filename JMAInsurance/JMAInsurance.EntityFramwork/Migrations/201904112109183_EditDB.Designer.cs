@@ -7,13 +7,13 @@ namespace JMAInsurance.EntityFramwork.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class EditApplicantTableAndRemoveIdentityUser : IMigrationMetadata
+    public sealed partial class EditDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(EditApplicantTableAndRemoveIdentityUser));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(EditDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904100826541_EditApplicantTableAndRemoveIdentityUser"; }
+            get { return "201904112109183_EditDB"; }
         }
         
         string IMigrationMetadata.Source
