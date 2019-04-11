@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace JMAInsurance.Web.Controllers
 {
-    [WorkflowFilter(MinRequiredStage = (int)WorkflowValues.VehicleInfo, CurrentStage = (int)WorkflowValues.Products)]
+    [WorkflowFilter(MinRequiredStage = (int)WorkflowValues.VehicleInfo, CurrentStage = (int)WorkflowValues.ProductInfo)]
     public class ProductsController : Controller
     {
         private readonly IApplicantService _applicantService;

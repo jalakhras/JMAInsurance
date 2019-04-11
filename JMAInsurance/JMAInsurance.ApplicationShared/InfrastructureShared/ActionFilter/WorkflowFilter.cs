@@ -44,7 +44,7 @@ namespace JMAInsurance.ApplicationShared.InfrastructureShared.ActionFilter
                                 filterContext.Result = GenerateRedirectUrl("VehicleInfo", "Vehicle");
                                 break;
 
-                            case (int)WorkflowValues.Products:
+                            case (int)WorkflowValues.ProductInfo:
                                 filterContext.Result = GenerateRedirectUrl("ProductInfo", "Products");
                                 break;
                         }
