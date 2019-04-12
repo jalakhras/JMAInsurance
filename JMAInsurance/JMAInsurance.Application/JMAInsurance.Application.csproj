@@ -82,6 +82,8 @@
     <Compile Include="Service\Applicants\IApplicantService.cs" />
     <Compile Include="Service\Employments\EmploymentService.cs" />
     <Compile Include="Service\Employments\IEmploymentService.cs" />
+    <Compile Include="Service\ErrorLog\ErrorLogService.cs" />
+    <Compile Include="Service\ErrorLog\IErrorLogService.cs" />
     <Compile Include="Service\Products\IProductsService.cs" />
     <Compile Include="Service\Products\ProductsService.cs" />
     <Compile Include="Service\Vehicle\IVehicleService.cs" />

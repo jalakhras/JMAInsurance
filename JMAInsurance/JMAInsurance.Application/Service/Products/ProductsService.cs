@@ -1,7 +1,5 @@
-﻿using System;
-using JMAInsurance.EntityFramwork.Repository;
+﻿using JMAInsurance.EntityFramwork.Repository;
 using JMAInsurance.Models.Dto;
-using JMAInsurance.Entity;
 using AutoMapper;
 
 namespace JMAInsurance.Application.Service.Products

@@ -2,6 +2,7 @@
 using JMAInsurance.Web.ConfigurationMapper;
 using JMAInsurance.Web.Infrastructure;
 using System.Configuration;
+using System.Diagnostics;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -23,5 +24,11 @@ namespace JMAInsurance.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        void Application_Error()
+        {
+            Debug.WriteLine("test");
+        }
+
     }
 }

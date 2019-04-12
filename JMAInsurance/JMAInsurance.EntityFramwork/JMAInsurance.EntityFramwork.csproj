@@ -172,6 +172,10 @@
     <Compile Include="Migrations\201904112109183_EditDB.Designer.cs">
       <DependentUpon>201904112109183_EditDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904121325096_AddErrorLog.cs" />
+    <Compile Include="Migrations\201904121325096_AddErrorLog.Designer.cs">
+      <DependentUpon>201904121325096_AddErrorLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Extensions.cs" />
@@ -191,6 +195,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904112109183_EditDB.resx">
       <DependentUpon>201904112109183_EditDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904121325096_AddErrorLog.resx">
+      <DependentUpon>201904121325096_AddErrorLog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

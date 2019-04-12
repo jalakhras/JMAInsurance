@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using JMAInsurance.ApplicationShared.InfrastructureShared.ExceptionLoggingFilter;
+using System.Web;
 using System.Web.Mvc;
 
 namespace JMAInsurance.Web
@@ -7,7 +8,8 @@ namespace JMAInsurance.Web
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            //filters.Add(new HandleErrorAttribute());
+            filters.Add(new ExceptionLoggingFilter());
         }
     }
 }

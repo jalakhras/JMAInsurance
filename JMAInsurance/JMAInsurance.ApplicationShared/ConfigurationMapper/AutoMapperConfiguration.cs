@@ -103,6 +103,16 @@ namespace JMAInsurance.ApplicationShared.ConfigurationMapper
                    .ForMember(dest => dest.Year, opt => opt.MapFrom(src => src.Year))
                    .ReverseMap();
 
+                cfg.CreateMap<ErrorLogDto, ErrorLog>()
+                   .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                   .ForMember(dest => dest.Message, opt => opt.MapFrom(src => src.Message))
+                   .ForMember(dest => dest.SessionId, opt => opt.MapFrom(src => src.SessionId))
+                   .ForMember(dest => dest.StackTrace, opt => opt.MapFrom(src => src.StackTrace))
+                   .ForMember(dest => dest.TargetedResult, opt => opt.MapFrom(src => src.TargetedResult))
+                   .ForMember(dest => dest.Timestamp, opt => opt.MapFrom(src => src.Timestamp))
+                   .ForMember(dest => dest.UserAgent, opt => opt.MapFrom(src => src.UserAgent))
+                   .ReverseMap();
+
 
 
 
