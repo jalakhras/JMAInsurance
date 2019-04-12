@@ -1,14 +1,14 @@
 ﻿@model JMAInsurance.Models.ViewModel.ApplicantVM
-@using W = JMAInsurance.ApplicationShared.InfrastructureShared.ActionFilter.WorkflowValues;
-
 @{
     ViewBag.Title = "Index";
 }
+@using W = JMAInsurance.ApplicationShared.InfrastructureShared.ActionFilter.WorkflowValues;
+
 @section ProgressBar{
-    @Html.Action("ProgressBar", "Home", new { currentStage = (int)W.Begin })
+    @Html.Action("ProgressBar", "Home", new { currentStage = W.ApplicantInfo })
 }
 <div class="col-md-12">
-    <h2 class="page-header">Who are you?<small style="margin-left: 25px">Help us get to know you!</small></h2>
+    <h2>Who are you?<small style="margin-left: 25px">Help us get to know you!</small></h2>
 </div>
 <div class="employment-info">
     @using (Html.BeginForm("ApplicantInfo", "Applicant", FormMethod.Post, new { @class = "form" }))
@@ -16,7 +16,7 @@
         <div class="col-md-12">
             @Html.ValidationSummary()
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading panel-title">Basic Info</div>
                 <div class="panel-body">
@@ -43,16 +43,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading panel-title">Additional Info</div>
                 <div class="panel-body">
                     <div class="form-group">
                         @{
                             var maritalStatus = new List<SelectListItem>(){
-                                                                    new SelectListItem(){ Text = "Single", Value = "Single" },
-                                                                    new SelectListItem(){ Text = "Married", Value = "Married" }
-                                                                };
+                                                        new SelectListItem(){ Text = "Single", Value = "Single" },
+                                                        new SelectListItem(){ Text = "Married", Value = "Married" }
+                                                    };
                         }
 
                         @Html.LabelFor(x => x.MaritalStatus)
@@ -62,10 +62,10 @@
                         <div class="form-group col-md-6">
                             @{
                                 var statusList = new List<SelectListItem>(){
-                                                                                new SelectListItem(){ Text = "Valid", Value = "Valid" },
-                                                                                new SelectListItem(){ Text = "Suspended", Value = "Suspended" },
-                                                                                new SelectListItem(){ Text = "No License", Value = "No License" }
-                                                                            };
+                                                                new SelectListItem(){ Text = "Valid", Value = "Valid" },
+                                                                new SelectListItem(){ Text = "Suspended", Value = "Suspended" },
+                                                                new SelectListItem(){ Text = "No License", Value = "No License" }
+                                                            };
                             }
 
                             @Html.LabelFor(x => x.LicenseStatus)
@@ -74,10 +74,10 @@
                         <div class="form-group col-md-6">
                             @{
                                 var yearLicensed = new List<SelectListItem>(){
-                                                                                new SelectListItem(){ Text = "Less than 1", Value = "1" },
-                                                                                new SelectListItem(){ Text = "1 -5 years", Value = "2" },
-                                                                                new SelectListItem(){ Text = "5+ years", Value = "3" }
-                                                                            };
+                                                                new SelectListItem(){ Text = "Less than 1", Value = "1" },
+                                                                new SelectListItem(){ Text = "1 -5 years", Value = "2" },
+                                                                new SelectListItem(){ Text = "5+ years", Value = "3" }
+                                                            };
                             }
 
                             @Html.LabelFor(x => x.LicenseStatus)
@@ -88,11 +88,11 @@
                     <div class="form-group">
                         @{
                             var educationOptions = new List<SelectListItem>(){
-                                                                    new SelectListItem(){ Text = "High School Graduate", Value = "1" },
-                                                                    new SelectListItem(){ Text = "Associate's Degree", Value = "2" },
-                                                                    new SelectListItem(){ Text = "Bachelor's Degree", Value = "3" },
-                                                                    new SelectListItem(){ Text = "Master's Degree or Higher", Value = "4" }
-                                                                };
+                                                        new SelectListItem(){ Text = "High School Graduate", Value = "1" },
+                                                        new SelectListItem(){ Text = "Associate's Degree", Value = "2" },
+                                                        new SelectListItem(){ Text = "Bachelor's Degree", Value = "3" },
+                                                        new SelectListItem(){ Text = "Master's Degree or Higher", Value = "4" }
+                                                    };
                         }
 
                         @Html.LabelFor(x => x.HighestEducation)

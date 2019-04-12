@@ -15,6 +15,7 @@ namespace JMAInsurance.Web.Controllers
         }
         public ActionResult Index()
         {
+          
             ViewBag.Home = "true";
             return View();
         }

@@ -106,3 +106,19 @@ span.btn:hover {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+
+div.centerPage {
+    /* margin-left: 321px; */
+    /* top: 50%; */
+    left: 35%;
+    /* width: 50em; */
+    /* height: 18em; */
+    /* margin-top: 35%; */
+    margin-left: -15em;
+    /* border: 1px solid #ccc; */
+    /* background-color: #f3f3f3; */
+    /* position: fixed; */
+    width: 70%;
+    /* right: 15%; */
+}

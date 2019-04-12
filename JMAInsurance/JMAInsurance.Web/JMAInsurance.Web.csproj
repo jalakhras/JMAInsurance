@@ -178,6 +178,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\RazorWorkflowExtensions.cs" />
+    <Compile Include="Infrastructure\ThemeViewEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -269,10 +270,19 @@
     <Content Include="Views\Employment\EmploymentInfo.cshtml" />
     <Content Include="Views\Vehicle\VehicleInfo.cshtml" />
     <Content Include="Views\Products\ProductInfo.cshtml" />
+    <Content Include="Views\Themes\Vertical\Applicant\ApplicantInfo.cshtml" />
+    <Content Include="Views\Themes\Vertical\Shared\ProgressBar.cshtml" />
+    <Content Include="Views\Themes\Vertical\Shared\_Layout.cshtml" />
+    <Content Include="Views\Themes\Vertical\_ViewStart.cshtml" />
+    <Content Include="Views\Themes\Vertical\Vehicle\VehicleInfo.cshtml" />
+    <Content Include="Views\Themes\Vertical\Address\AddressInfo.cshtml" />
+    <Content Include="Views\Themes\Vertical\Employment\EmploymentInfo.cshtml" />
+    <Content Include="Views\Themes\Vertical\Products\ProductInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="common\" />
     <Folder Include="Models\" />
     <Folder Include="Views\ScriptViews\" />
     <Folder Include="Views\Service\" />
