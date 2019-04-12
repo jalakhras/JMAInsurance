@@ -23,11 +23,11 @@
                     <div class="form-group">
                         @{
                             var employmentTypes = new List<SelectListItem>(){
-                                                        new SelectListItem(){ Text = "Full Time", Value = "1" },
-                                                        new SelectListItem(){ Text = "Part Time", Value = "2" },
-                                                        new SelectListItem(){ Text = "Unemployed", Value = "3" },
-                                                        new SelectListItem(){ Text = "Retired", Value = "4" }
-                                                    };
+                                            new SelectListItem(){ Text = "Full Time", Value = "FullTime" },
+                                            new SelectListItem(){ Text = "Part Time", Value = "PartTime" },
+                                            new SelectListItem(){ Text = "Unemployed", Value = "Unemployed" },
+                                            new SelectListItem(){ Text = "Retired", Value = "Retired" }
+                                        };
                         }
 
                         @Html.LabelFor(x => x.PrimaryEmployer.EmploymentType)
@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(x => x.PrimaryEmployer.StartDate)
-                        @Html.TextBoxFor(x => x.PrimaryEmployer.StartDate, new { @Value = Model.PrimaryEmployer.StartDate.HasValue ? Model.PrimaryEmployer.StartDate.Value.ToString("MM/dd/yyyy") : "", @class = "form-control datepicker required" })
+                        @Html.TextBoxFor(x => x.PrimaryEmployer.StartDate, new { @Value = (Model != null && Model.PrimaryEmployer != null && Model.PrimaryEmployer.StartDate.HasValue) ? Model?.PrimaryEmployer?.StartDate.Value.ToString("MM/dd/yyyy") : "", @class = "form-control datepicker required" })
                     </div>
                 </div>
             </div>
@@ -58,23 +58,23 @@
                 <div class="panel-body">
                     <div class="form-group">
                         @Html.LabelFor(x => x.PreviousEmployer.EmploymentType)
-                        @Html.DropDownListFor(x => x.PreviousEmployer.EmploymentType, employmentTypes, new { @class = "form-control required" })
+                        @Html.DropDownListFor(x => x.PreviousEmployer.EmploymentType, employmentTypes, new { @class = "form-control" })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(x => x.PreviousEmployer.Employer)
-                        @Html.TextBoxFor(x => x.PreviousEmployer.Employer, new { @class = "form-control required" })
+                        @Html.TextBoxFor(x => x.PreviousEmployer.Employer, new { @class = "form-control" })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(x => x.PreviousEmployer.Position)
-                        @Html.TextBoxFor(x => x.PreviousEmployer.Position, new { @class = "form-control required" })
+                        @Html.TextBoxFor(x => x.PreviousEmployer.Position, new { @class = "form-control" })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(x => x.PreviousEmployer.GrossMonthlyIncome)
-                        @Html.TextBoxFor(x => x.PreviousEmployer.GrossMonthlyIncome, new { @class = "form-control required digits" })
+                        @Html.TextBoxFor(x => x.PreviousEmployer.GrossMonthlyIncome, new { @class = "form-control digits" })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(x => x.PreviousEmployer.StartDate)
-                        @Html.TextBoxFor(x => x.PreviousEmployer.StartDate, new { @Value = Model.PreviousEmployer.StartDate.HasValue ? Model.PreviousEmployer.StartDate.Value.ToString("MM/dd/yyyy") : "", @class = "form-control datepicker-alt required" })
+                        @Html.TextBoxFor(x => x.PreviousEmployer.StartDate, new { @Value = (Model!=null && Model.PreviousEmployer!=null && Model.PreviousEmployer.StartDate.HasValue) ? Model?.PreviousEmployer?.StartDate.Value.ToString("MM/dd/yyyy") : "", @class = "form-control datepicker-alt" })
                     </div>
                 </div>
             </div>
