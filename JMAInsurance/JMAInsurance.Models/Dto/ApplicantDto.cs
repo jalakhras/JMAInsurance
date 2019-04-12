@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JMAInsurance.Models.Infrastructure.CustomValidator;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,6 +15,7 @@ namespace JMAInsurance.Models.Dto
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
+        [BirthdateValidator]
         public DateTime? Dob { get; set; }
         public double? Phone { get; set; }
         [Required]

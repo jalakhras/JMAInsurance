@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JMAInsurance.Models.Infrastructure.CustomValidator;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace JMAInsurance.Models.ViewModel
@@ -14,6 +15,7 @@ namespace JMAInsurance.Models.ViewModel
         public Guid ApplicantTracker { get; set; }
         [Required]
         [Display(Name = "Date of Birth")]
+        [BirthdateValidator]
         public DateTime? Dob { get; set; }
         [Required]
         public double? Phone { get; set; }
