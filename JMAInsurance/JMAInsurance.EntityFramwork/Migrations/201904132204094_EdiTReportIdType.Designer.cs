@@ -7,13 +7,13 @@ namespace JMAInsurance.EntityFramwork.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddMonthlyandWeeklyReportTabel : IMigrationMetadata
+    public sealed partial class EdiTReportIdType : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddMonthlyandWeeklyReportTabel));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(EdiTReportIdType));
         
         string IMigrationMetadata.Id
         {
-            get { return "201904132109538_AddMonthlyandWeeklyReportTabel"; }
+            get { return "201904132204094_EdiTReportIdType"; }
         }
         
         string IMigrationMetadata.Source

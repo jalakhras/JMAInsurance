@@ -7,8 +7,8 @@ namespace JMAInsurance.Entity
 
     public class EMonthlyReport
     {
-        [Key]
-        public double Id { get; set; }
+
+        public int Id { get; set; }
         public double NumberRead { get; set; }
         public double ClickThruRate { get; set; }
         public double NumberSent { get; set; }

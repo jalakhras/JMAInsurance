@@ -168,21 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbContext\JMAInsuranceDbContext.cs" />
-    <Compile Include="Migrations\201904112109183_EditDB.cs" />
-    <Compile Include="Migrations\201904112109183_EditDB.Designer.cs">
-      <DependentUpon>201904112109183_EditDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904121325096_AddErrorLog.cs" />
-    <Compile Include="Migrations\201904121325096_AddErrorLog.Designer.cs">
-      <DependentUpon>201904121325096_AddErrorLog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904132109538_AddMonthlyandWeeklyReportTabel.cs" />
-    <Compile Include="Migrations\201904132109538_AddMonthlyandWeeklyReportTabel.Designer.cs">
-      <DependentUpon>201904132109538_AddMonthlyandWeeklyReportTabel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201904132137045_AddSchemaForReportTabel.cs" />
-    <Compile Include="Migrations\201904132137045_AddSchemaForReportTabel.Designer.cs">
-      <DependentUpon>201904132137045_AddSchemaForReportTabel.cs</DependentUpon>
+    <Compile Include="Migrations\201904132204094_EdiTReportIdType.cs" />
+    <Compile Include="Migrations\201904132204094_EdiTReportIdType.Designer.cs">
+      <DependentUpon>201904132204094_EdiTReportIdType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -201,17 +189,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904112109183_EditDB.resx">
-      <DependentUpon>201904112109183_EditDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904121325096_AddErrorLog.resx">
-      <DependentUpon>201904121325096_AddErrorLog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904132109538_AddMonthlyandWeeklyReportTabel.resx">
-      <DependentUpon>201904132109538_AddMonthlyandWeeklyReportTabel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201904132137045_AddSchemaForReportTabel.resx">
-      <DependentUpon>201904132137045_AddSchemaForReportTabel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904132204094_EdiTReportIdType.resx">
+      <DependentUpon>201904132204094_EdiTReportIdType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

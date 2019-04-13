@@ -18,14 +18,13 @@ namespace JMAInsurance.Web.Controllers
         /// you can user Fiddler to call this Action methods 
         /// 
         /// this is requsit Body
-        //<EWeeklyReportDto>
-        //<NumberRead>100</NumberRead>
-        //<ClickThruRate>3.5</ClickThruRate>
-        //<NumberSent>2700</NumberSent>
-        //<AverageQuote>117</AverageQuote>
-        //<ProjectedConversationRate>2.1</ProjectedConversationRate>
-        //</EWeeklyReportDto>
-
+        ///<EWeeklyReportDto>
+        ///<NumberRead>100</NumberRead>
+        ///<ClickThruRate>3.5</ClickThruRate>
+        ///<NumberSent>2700</NumberSent>
+        ///<AverageQuote>117</AverageQuote>
+        ///<ProjectedConversationRate>2.1</ProjectedConversationRate>
+        ///</EWeeklyReportDto>
         /// </summary>
         /// <param name="weeklyReportDto"></param>
         /// <returns></returns>
@@ -44,13 +43,17 @@ namespace JMAInsurance.Web.Controllers
         /// you can user Fiddler to call this Action methods 
         /// 
         /// this is requsit Body
-        //<EMonthlyReportDto>
-        //<NumberRead>100</NumberRead>
-        //<ClickThruRate>3.5</ClickThruRate>
-        //<NumberSent>2700</NumberSent>
-        //<AverageQuote>117</AverageQuote>
-        //<ProjectedConversationRate>2.1</ProjectedConversationRate>
-        //</EMonthlyReportDto>
+        /// User-Agent: Fiddler
+       ///        Content-Type: text/xml
+        ///        Host: localhost:15621
+        ///Content-Length: 232
+        ///<EMonthlyReportDto>
+        ///<NumberRead>100</NumberRead>
+        ///<ClickThruRate>3.5</ClickThruRate>
+        ///<NumberSent>2700</NumberSent>
+        ///<AverageQuote>117</AverageQuote>
+        ///<ProjectedConversationRate>2.1</ProjectedConversationRate>
+        ///</EMonthlyReportDto>
         /// </summary>
         /// <param name="monthlyReportDto"></param>
         /// <returns></returns>

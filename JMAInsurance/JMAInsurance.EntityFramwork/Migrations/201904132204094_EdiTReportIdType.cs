@@ -3,7 +3,7 @@ namespace JMAInsurance.EntityFramwork.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class EditDB : DbMigration
+    public partial class EdiTReportIdType : DbMigration
     {
         public override void Up()
         {
@@ -120,12 +120,53 @@ namespace JMAInsurance.EntityFramwork.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "common.Errors",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Message = c.String(),
+                        ControllerName = c.String(),
+                        UserAgent = c.String(),
+                        StackTrace = c.String(),
+                        SessionId = c.String(),
+                        TargetedResult = c.String(),
+                        Timestamp = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "Lookups.MaritalStatus",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         StatusAr = c.String(),
                         StatusEn = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "Insurance.EMonthlyReports",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        NumberRead = c.Double(nullable: false),
+                        ClickThruRate = c.Double(nullable: false),
+                        NumberSent = c.Double(nullable: false),
+                        AverageQuote = c.Double(nullable: false),
+                        ProjectedConversationRate = c.Double(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "Insurance.WeeklyReports",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        NumberRead = c.Double(),
+                        ClickThruRate = c.Double(),
+                        NumberSent = c.Double(),
+                        AverageQuote = c.Double(),
+                        ProjectedConversationRate = c.Double(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -143,7 +184,10 @@ namespace JMAInsurance.EntityFramwork.Migrations
             DropIndex("Insurance.Products", new[] { "ApplicantId" });
             DropIndex("Insurance.Employments", new[] { "ApplicantId" });
             DropIndex("Insurance.Address", new[] { "ApplicantId" });
+            DropTable("Insurance.WeeklyReports");
+            DropTable("Insurance.EMonthlyReports");
             DropTable("Lookups.MaritalStatus");
+            DropTable("common.Errors");
             DropTable("Lookups.Country");
             DropTable("Lookups.City");
             DropTable("Insurance.Vehicles");
