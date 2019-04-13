@@ -120,6 +120,8 @@
     <Compile Include="InfrastructureShared\DataExport\CSVResult.cs" />
     <Compile Include="InfrastructureShared\DataExport\XMLResult.cs" />
     <Compile Include="InfrastructureShared\ExceptionLoggingFilter\ExceptionLoggingFilter.cs" />
+    <Compile Include="InfrastructureShared\XMLModelBinder\XMLModelBinder.cs" />
+    <Compile Include="InfrastructureShared\XMLModelBinder\XMLModelBinderProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

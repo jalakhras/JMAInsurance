@@ -1,4 +1,5 @@
 ﻿using JMAInsurance.ApplicationShared;
+using JMAInsurance.ApplicationShared.InfrastructureShared.XMLModelBinder;
 using JMAInsurance.Web.ConfigurationMapper;
 using JMAInsurance.Web.Infrastructure;
 using System.Configuration;
@@ -18,6 +19,7 @@ namespace JMAInsurance.Web
                 var activeTheme = ConfigurationManager.AppSettings["ActiveTheme"];
                 ViewEngines.Engines.Insert(0, new ThemeViewEngine(activeTheme));
             };
+            ModelBinderProviders.BinderProviders.Insert(0, new XMLModelBinderProvider());
             AreaRegistration.RegisterAllAreas();
             UnityConfig.RegisterComponents();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

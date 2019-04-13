@@ -44,13 +44,18 @@ namespace JMAInsurance.ApplicationShared.InfrastructureShared.ExceptionLoggingFi
             //Send an email notification
             MailMessage email = new MailMessage();
 
-            email.From = new MailAddress("Jassar19942014@gmail.com");
+            email.From = new MailAddress("jassar@localhost.com");
             email.To.Add(new MailAddress(ConfigurationManager.AppSettings["ErrorEmail"]));
             email.Subject = "An error has occured";
             email.Body = filterContext.Exception.Message + Environment.NewLine
                 + filterContext.Exception.StackTrace;
             SmtpClient client = new SmtpClient("localhost");
-            //client.Send(email);
+            client.Host = "localhost";// smtp server address here...
+            client.Port = 587;
+            client.EnableSsl = true;
+            client.UseDefaultCredentials = true;
+            client.DeliveryMethod = SmtpDeliveryMethod.Network;
+           // client.Send(email);
            
 
         }

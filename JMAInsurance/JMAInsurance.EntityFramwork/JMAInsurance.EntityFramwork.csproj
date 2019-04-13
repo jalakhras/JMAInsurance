@@ -176,6 +176,14 @@
     <Compile Include="Migrations\201904121325096_AddErrorLog.Designer.cs">
       <DependentUpon>201904121325096_AddErrorLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904132109538_AddMonthlyandWeeklyReportTabel.cs" />
+    <Compile Include="Migrations\201904132109538_AddMonthlyandWeeklyReportTabel.Designer.cs">
+      <DependentUpon>201904132109538_AddMonthlyandWeeklyReportTabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904132137045_AddSchemaForReportTabel.cs" />
+    <Compile Include="Migrations\201904132137045_AddSchemaForReportTabel.Designer.cs">
+      <DependentUpon>201904132137045_AddSchemaForReportTabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Extensions.cs" />
@@ -198,6 +206,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904121325096_AddErrorLog.resx">
       <DependentUpon>201904121325096_AddErrorLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904132109538_AddMonthlyandWeeklyReportTabel.resx">
+      <DependentUpon>201904132109538_AddMonthlyandWeeklyReportTabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904132137045_AddSchemaForReportTabel.resx">
+      <DependentUpon>201904132137045_AddSchemaForReportTabel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

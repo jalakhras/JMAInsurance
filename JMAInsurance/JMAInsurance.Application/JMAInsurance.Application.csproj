@@ -84,6 +84,10 @@
     <Compile Include="Service\Employments\IEmploymentService.cs" />
     <Compile Include="Service\ErrorLog\ErrorLogService.cs" />
     <Compile Include="Service\ErrorLog\IErrorLogService.cs" />
+    <Compile Include="Service\IEReport\EMonthlyReportService.cs" />
+    <Compile Include="Service\IEReport\EWeeklyReportService.cs" />
+    <Compile Include="Service\IEReport\IEMonthlyReportService.cs" />
+    <Compile Include="Service\IEReport\IEWeeklyReportService.cs" />
     <Compile Include="Service\Products\IProductsService.cs" />
     <Compile Include="Service\Products\ProductsService.cs" />
     <Compile Include="Service\Vehicle\IVehicleService.cs" />

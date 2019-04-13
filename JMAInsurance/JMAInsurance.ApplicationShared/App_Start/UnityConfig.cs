@@ -12,6 +12,7 @@ using JMAInsurance.Application.Service.Products;
 using JMAInsurance.Application.Service.Address;
 using JMAInsurance.Application.Service.Vehicle;
 using JMAInsurance.Application.Service.ErrorLog;
+using JMAInsurance.Application.Service.IEReport;
 
 namespace JMAInsurance.ApplicationShared
 {
@@ -32,6 +33,8 @@ namespace JMAInsurance.ApplicationShared
             container.RegisterType<IAddressService, AddressService>();
             container.RegisterType<IVehicleService, VehicleService>();
             container.RegisterType<IErrorLogService, ErrorLogService>();
+            container.RegisterType< IEWeeklyReportService, EWeeklyReportService>();
+            container.RegisterType<IEMonthlyReportService, EMonthlyReportService>();
             // repositories
             container.RegisterType<IRepository<Applicant>, Repository<Applicant>>();
             container.RegisterType<IRepository<Employment>, Repository<Employment>>();
@@ -39,6 +42,8 @@ namespace JMAInsurance.ApplicationShared
             container.RegisterType<IRepository<Address>, Repository<Address>>();
             container.RegisterType<IRepository<Vehicle>, Repository<Vehicle>>();
             container.RegisterType<IRepository<ErrorLog>, Repository<ErrorLog>>();
+            container.RegisterType<IRepository<EMonthlyReport>, Repository<EMonthlyReport>>();
+            container.RegisterType<IRepository<EWeeklyReport>, Repository<EWeeklyReport>>();
             // converter
             AutoMapperConfiguration.Initialize();
             container.RegisterType<IDataConverter, DataConverter>();

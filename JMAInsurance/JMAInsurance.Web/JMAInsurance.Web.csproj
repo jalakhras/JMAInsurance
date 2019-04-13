@@ -169,6 +169,7 @@
     <Compile Include="ConfigurationMapper\IDataConverter.cs" />
     <Compile Include="Controllers\AddressController.cs" />
     <Compile Include="Controllers\ApplicantController.cs" />
+    <Compile Include="Controllers\EMarketingController.cs" />
     <Compile Include="Controllers\EmploymentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -248,7 +249,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <None Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -284,6 +287,7 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="common\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\EMarketing\" />
     <Folder Include="Views\ScriptViews\" />
     <Folder Include="Views\Service\" />
   </ItemGroup>

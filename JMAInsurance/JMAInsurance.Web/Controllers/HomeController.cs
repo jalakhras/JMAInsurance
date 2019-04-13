@@ -43,7 +43,12 @@ namespace JMAInsurance.Web.Controllers
             
         }
 
-      
+        public ActionResult Error()
+        {
+            var test = int.Parse("test");
+            return View();
+        }
+
 
     }
 }

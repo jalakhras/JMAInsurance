@@ -52,8 +52,10 @@
     <Compile Include="Dto\ApplicantDto.cs" />
     <Compile Include="Dto\CityDto.cs" />
     <Compile Include="Dto\CountryDto.cs" />
+    <Compile Include="Dto\EMonthlyReportDto.cs" />
     <Compile Include="Dto\EmploymentDto.cs" />
     <Compile Include="Dto\ErrorLogDto.cs" />
+    <Compile Include="Dto\EWeeklyReportDto.cs" />
     <Compile Include="Dto\MaritalStatusDto.cs" />
     <Compile Include="Dto\ProductsDto.cs" />
     <Compile Include="Dto\ProgressDto.cs" />

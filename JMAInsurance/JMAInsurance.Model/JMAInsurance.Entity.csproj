@@ -85,8 +85,10 @@
     <Compile Include="Entity\Applicant.cs" />
     <Compile Include="Entity\City.cs" />
     <Compile Include="Entity\Country.cs" />
+    <Compile Include="Entity\EMonthlyReport.cs" />
     <Compile Include="Entity\Employment.cs" />
     <Compile Include="Entity\ErrorLog.cs" />
+    <Compile Include="Entity\EWeeklyReport.cs" />
     <Compile Include="Entity\MaritalStatus.cs" />
     <Compile Include="Entity\Products.cs" />
     <Compile Include="Entity\Progress.cs" />

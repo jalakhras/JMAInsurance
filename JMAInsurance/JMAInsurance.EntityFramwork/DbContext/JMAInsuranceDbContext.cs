@@ -19,6 +19,8 @@ namespace JMAInsurance.EntityFramwork.DbContext
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<ErrorLog> Errors { get; set; }
+        public DbSet<EWeeklyReport> WeeklyReports { get; set; }
+        public DbSet<EMonthlyReport> MonthlyReports { get; set; }
     }
 
     public class JMAInsuranceInitializer : DropCreateDatabaseIfModelChanges<JMAInsuranceDbContext>

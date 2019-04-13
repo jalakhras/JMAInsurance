@@ -2,7 +2,6 @@
 using JMAInsurance.Entity;
 using JMAInsurance.Models.Dto;
 using JMAInsurance.Models.ViewModel;
-using System.Collections.Generic;
 
 namespace JMAInsurance.ApplicationShared.ConfigurationMapper
 {
@@ -44,6 +43,24 @@ namespace JMAInsurance.ApplicationShared.ConfigurationMapper
                     .ForMember(dest => dest.IsPrimary, opt => opt.MapFrom(src => src.IsPrimary))
                     .ForMember(dest => dest.ApplicantId, opt => opt.MapFrom(src => src.ApplicantId))
                     .ForMember(dest => dest.Applicant, opt => opt.MapFrom(src => src.Applicant))
+                    .ReverseMap();
+
+                cfg.CreateMap<EMonthlyReport, EMonthlyReportDto>()
+                    .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                    .ForMember(dest => dest.AverageQuote, opt => opt.MapFrom(src => src.AverageQuote))
+                    .ForMember(dest => dest.ClickThruRate, opt => opt.MapFrom(src => src.ClickThruRate))
+                    .ForMember(dest => dest.NumberRead, opt => opt.MapFrom(src => src.NumberRead))
+                    .ForMember(dest => dest.NumberSent, opt => opt.MapFrom(src => src.NumberSent))
+                    .ForMember(dest => dest.ProjectedConversationRate, opt => opt.MapFrom(src => src.ProjectedConversationRate))
+                    .ReverseMap();
+
+                cfg.CreateMap<EWeeklyReport, EWeeklyReportDto>()
+                    .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
+                    .ForMember(dest => dest.AverageQuote, opt => opt.MapFrom(src => src.AverageQuote))
+                    .ForMember(dest => dest.ClickThruRate, opt => opt.MapFrom(src => src.ClickThruRate))
+                    .ForMember(dest => dest.NumberRead, opt => opt.MapFrom(src => src.NumberRead))
+                    .ForMember(dest => dest.NumberSent, opt => opt.MapFrom(src => src.NumberSent))
+                    .ForMember(dest => dest.ProjectedConversationRate, opt => opt.MapFrom(src => src.ProjectedConversationRate))
                     .ReverseMap();
 
                 cfg.CreateMap<EmploymentDto, EmploymentVM>()
