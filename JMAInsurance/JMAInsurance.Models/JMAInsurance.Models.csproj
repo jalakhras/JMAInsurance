@@ -67,6 +67,7 @@
     <Compile Include="ViewModel\ApplicantVM.cs" />
     <Compile Include="ViewModel\Employments.cs" />
     <Compile Include="ViewModel\EmploymentVM.cs" />
+    <Compile Include="ViewModel\LogDataVM.cs" />
     <Compile Include="ViewModel\ProductsVM.cs" />
     <Compile Include="ViewModel\ProgressVM.cs" />
     <Compile Include="ViewModel\VehicleVM.cs" />
@@ -75,6 +76,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\JMAInsurance.Model\JMAInsurance.Entity.csproj">
+      <Project>{B78C9C68-4C36-408B-8ED8-54AA68DFA6B6}</Project>
+      <Name>JMAInsurance.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

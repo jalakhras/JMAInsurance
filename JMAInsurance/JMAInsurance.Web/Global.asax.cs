@@ -1,6 +1,6 @@
 ﻿using JMAInsurance.ApplicationShared;
+using JMAInsurance.ApplicationShared.InfrastructureShared.ValueProvider;
 using JMAInsurance.ApplicationShared.InfrastructureShared.XMLModelBinder;
-using JMAInsurance.Web.ConfigurationMapper;
 using JMAInsurance.Web.Infrastructure;
 using System.Configuration;
 using System.Diagnostics;
@@ -20,6 +20,8 @@ namespace JMAInsurance.Web
                 ViewEngines.Engines.Insert(0, new ThemeViewEngine(activeTheme));
             };
             ModelBinderProviders.BinderProviders.Insert(0, new XMLModelBinderProvider());
+            ValueProviderFactories.Factories.Insert(0, new HttpValueProviderFactory());
+
             AreaRegistration.RegisterAllAreas();
             UnityConfig.RegisterComponents();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

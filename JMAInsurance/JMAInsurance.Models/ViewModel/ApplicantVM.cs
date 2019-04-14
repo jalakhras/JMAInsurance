@@ -1,11 +1,13 @@
-﻿using JMAInsurance.Models.Infrastructure.CustomValidator;
+﻿using JMAInsurance.Entity.Entity;
+using JMAInsurance.Models.Infrastructure.CustomValidator;
 using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace JMAInsurance.Models.ViewModel
 {
-    public class ApplicantVM
+    public class ApplicantVM : LogDataVM
     {
+        public string UserAgent { get; set; }
         [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
