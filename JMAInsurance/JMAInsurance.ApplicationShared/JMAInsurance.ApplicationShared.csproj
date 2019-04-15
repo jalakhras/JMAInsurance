@@ -117,6 +117,7 @@
     <Compile Include="ConfigurationMapper\IDataConverter.cs" />
     <Compile Include="InfrastructureShared\ActionFilter\WorkflowFilter.cs" />
     <Compile Include="InfrastructureShared\ActionFilter\WorkflowValuesEnum.cs" />
+    <Compile Include="InfrastructureShared\Authenticate\HttpAuthenticate.cs" />
     <Compile Include="InfrastructureShared\DataExport\CSVResult.cs" />
     <Compile Include="InfrastructureShared\DataExport\XMLResult.cs" />
     <Compile Include="InfrastructureShared\ExceptionLoggingFilter\ExceptionLoggingFilter.cs" />

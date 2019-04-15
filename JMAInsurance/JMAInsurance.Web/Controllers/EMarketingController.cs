@@ -1,9 +1,11 @@
 ﻿using JMAInsurance.Application.Service.IEReport;
+using JMAInsurance.ApplicationShared.InfrastructureShared.Authenticate;
 using JMAInsurance.Models.Dto;
 using System.Web.Mvc;
 
 namespace JMAInsurance.Web.Controllers
 {
+    [HttpAuthenticate("EAdmin", "Testing123")]
     public class EMarketingController : Controller
     {
         private readonly IEMonthlyReportService _eMonthlyReportService;
