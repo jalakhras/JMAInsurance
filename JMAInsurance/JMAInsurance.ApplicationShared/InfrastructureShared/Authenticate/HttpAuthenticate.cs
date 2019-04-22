@@ -19,7 +19,7 @@ namespace JMAInsurance.ApplicationShared.InfrastructureShared.Authenticate
         public void OnAuthentication(AuthenticationContext filterContext)
         {
             var authHeader = filterContext.HttpContext.Request.Headers["Authorization"];
-            if (!String.IsNullOrEmpty(authHeader))
+            if (!string.IsNullOrEmpty(authHeader))
             {
                 var credentials = ASCIIEncoding.ASCII.GetString(
                     Convert.FromBase64String(authHeader.Replace("Basic", ""))).Split(':');
